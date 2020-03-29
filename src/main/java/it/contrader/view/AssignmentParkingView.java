@@ -34,7 +34,7 @@ public class AssignmentParkingView extends AbstractView{
 			@SuppressWarnings("unchecked")
 			List<AssignmentParkingDTO> assignmentParkingDTO = (List<AssignmentParkingDTO>) request.get("assignmentParkings");
 			for(AssignmentParkingDTO apd: assignmentParkingDTO) {
-				System.out.println("siamo qui");
+				
 				System.out.println(apd.toString());
 			}
 			System.out.println();

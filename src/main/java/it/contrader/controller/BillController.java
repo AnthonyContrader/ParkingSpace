@@ -53,7 +53,6 @@ public class BillController implements Controller {
 			break;
 			
 		case "INSERT":
-			System.out.println("sono in do control");
 			id_assignment = Integer.parseInt(request.get("id_assignment").toString());
 			price = Double.parseDouble(request.get("price").toString());
 			is_paid = Boolean.parseBoolean(request.get("is_paid").toString());
@@ -104,7 +103,6 @@ public class BillController implements Controller {
 				break;
 		
 			case "I":
-				System.out.println("sono in do control");
 				MainDispatcher.getInstance().callView(sub_package + "BillInsert", null);			
 				break;
 			
@@ -126,13 +124,11 @@ public class BillController implements Controller {
 				
 			//default of switch(choice)
 			default:
-				MainDispatcher.getInstance().callView("Login", null);
-				System.out.println("c' e un errore");		
+				MainDispatcher.getInstance().callView("Login", null);		
 			}
 		//default of switch(mode)	
 		default:
 			MainDispatcher.getInstance().callView("Login", null);
-			System.out.println("c' e un errore n2");	
 		}
 		
 	}
