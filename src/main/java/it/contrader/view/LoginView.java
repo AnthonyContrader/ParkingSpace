@@ -10,20 +10,21 @@ public class LoginView extends AbstractView {
 	private String password;
 
 	public void showResults(Request request) {
-
 	}
 	/**
 	 * chiede in input all'utente uno username e una password usando il metodo getInput() presente in AbstractView
 	 */
 	public void showOptions() {
 		
-		System.out.println("----- .:LOGIN:. ----");
+		System.out.println("----- .:LOGIN TO ParkingSpace:. ----");
 		
 		System.out.println(" Nome utente:");
 		this.username = getInput();
-		
+	
 		System.out.println(" Password:");
 		this.password = getInput();
+		
+		
 	}
 
 	/**

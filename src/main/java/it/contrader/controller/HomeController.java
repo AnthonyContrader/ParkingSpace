@@ -22,27 +22,28 @@ public class HomeController implements Controller {
 			
 			String username = request.get("username").toString();
 			String password = request.get("password").toString();
-
 			// Qui invoca il Login Service
 			String usertype= loginService.login(username, password);
-
+			
 			// Reindirizza alla giusta view in base allo usertype
-			switch(usertype) {
+			switch(usertype.toUpperCase()) {
 			
 			case "ADMIN":
 				MainDispatcher.getInstance().callView("HomeAdmin", request);
 				break;
-				
 			case "USER": 
 				MainDispatcher.getInstance().callView("HomeUser", request);
 				break;
+			case "ASSIGNMENTPARKING":
+				MainDispatcher.getInstance().callView("AssignmentParking", request);
+				break;
 			
-			default:
-				 MainDispatcher.getInstance().callView("Login", null);
-				 break;
+			/*
+			 * case null: MainDispatcher.getInstance().callView("Login", null); break;
+			 */
 			}
+		}else {
+			MainDispatcher.getInstance().callView("Login", null);
 		}
-		else MainDispatcher.getInstance().callView("Login", null);
-
 	}
 }

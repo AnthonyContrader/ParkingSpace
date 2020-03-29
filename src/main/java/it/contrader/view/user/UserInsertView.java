@@ -16,8 +16,8 @@ public class UserInsertView extends AbstractView{
 	}
 	
 	/**
-	 * Se la request non è nulla (ovvero se si arriva dalla mode INSERT del controller) mostra
-	 * l'esito dell'operazione
+	 * Se la request non è nulla (ovvero se si arriva dalla mode=INSERT del controller) mostra-
+	 * -l'esito dell'operazione
 	 */
 	@Override
 	public void showResults(Request request) {

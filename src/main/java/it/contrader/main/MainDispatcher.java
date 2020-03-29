@@ -32,7 +32,7 @@ public class MainDispatcher {
 		return instance;
 	}
 	
-	/*
+	/**
 	 * metodo CallAction
 	 * parametri:  - String controller : è una stringa che rappresenta il nome specifico dell'entità di cui vogliamo chiamare 
 	 * 									 il controller. 
@@ -61,7 +61,7 @@ public class MainDispatcher {
 	}
 	
 	
-	/*
+	/**
 	 * metodo callView
 	 * parametri: String view : contiene il nome della classe che implementa la view interessata
 	 * 							esempio "UtenteView" verrà chiamato tramite "Utente"

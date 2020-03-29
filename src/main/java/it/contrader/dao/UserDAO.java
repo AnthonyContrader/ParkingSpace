@@ -14,9 +14,9 @@ import it.contrader.model.User;
  */
 public class UserDAO {
 
-	private final String QUERY_ALL = "SELECT * FROM user";
+	private final String QUERY_ALL    = "SELECT * FROM user";
 	private final String QUERY_CREATE = "INSERT INTO user (username, password, usertype) VALUES (?,?,?)";
-	private final String QUERY_READ = "SELECT * FROM user WHERE id=?";
+	private final String QUERY_READ   = "SELECT * FROM user WHERE id=?";
 	private final String QUERY_UPDATE = "UPDATE user SET username=?, password=?, usertype=? WHERE id=?";
 	private final String QUERY_DELETE = "DELETE FROM user WHERE id=?";
 
@@ -30,6 +30,7 @@ public class UserDAO {
 		try {
 			Statement statement = connection.createStatement();
 			ResultSet resultSet = statement.executeQuery(QUERY_ALL);
+            
 			User user;
 			while (resultSet.next()) {
 				int id = resultSet.getInt("id");
@@ -56,6 +57,7 @@ public class UserDAO {
 			preparedStatement.execute();
 			return true;
 		} catch (SQLException e) {
+			e.printStackTrace();
 			return false;
 		}
 
@@ -69,7 +71,8 @@ public class UserDAO {
 			PreparedStatement preparedStatement = connection.prepareStatement(QUERY_READ);
 			preparedStatement.setInt(1, userId);
 			ResultSet resultSet = preparedStatement.executeQuery();
-			resultSet.next();
+		    resultSet.next();
+		    
 			String username, password, usertype;
 
 			username = resultSet.getString("username");
@@ -121,6 +124,7 @@ public class UserDAO {
 					return false;
 
 			} catch (SQLException e) {
+				e.printStackTrace();
 				return false;
 			}
 		}
@@ -139,6 +143,7 @@ public class UserDAO {
 				return true;
 
 		} catch (SQLException e) {
+			e.printStackTrace();
 		}
 		return false;
 	}

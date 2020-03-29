@@ -5,30 +5,37 @@ import it.contrader.controller.Request;
 import it.contrader.main.MainDispatcher;
 
 public class HomeUserView extends AbstractView{
-
+	
+	private Request request;
 	String choice;
 
 	@Override
 	public void showResults(Request request) {
-		System.out.println("\n-----Purtroppo in questo sample l'utente non puà fare nulla, ci scusiamo per il disagio.-----");
+		if(request!=null) {
+	    	System.out.println("\n Benvenuto in ParkingPlace PROJECT " +request.get("username").toString() + "\n");
+	    }
 
 	}
 
 	@Override
 	public void showOptions() {
 		System.out.println("-------------MENU------------\n");
-		System.out.println("NESSUNA OPZIONE DISPONIBILE!");
-		System.out.println("\n Esatto, puoi solo uscire...");
+		System.out.println("[A]ssignmentParking, [E]xit");
 		choice = this.getInput();
 
 	}
 
 	@Override
 	public void submit() {
-
-		switch (choice) {
-
-		case "e":
+		
+		request = new Request();
+		switch (choice.toUpperCase()) {
+		
+		case "A":
+			this.request.put("mode", "ASSIGNMENTPARKINGLIST");
+        	MainDispatcher.getInstance().callAction("AssignmentParking", "doControl", request);
+        	break;
+		case "E":
 			MainDispatcher.getInstance().callAction("Login", "doControl", null);
 			break;
 

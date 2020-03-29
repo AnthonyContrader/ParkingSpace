@@ -44,14 +44,13 @@ public class UserController implements Controller {
 		String mode = (String) request.get("mode");
 		
 		String choice = (String) request.get("choice");
-
 		//Definisce i campi della classe (serviranno sempre, tanto vale definirli una sola volta)
 		int id;
 		String username;
 		String password;
 		String usertype;
 
-		switch (mode) {
+		switch (mode.toUpperCase()) {
 		
 		// Arriva qui dalla UserReadView. Invoca il Service con il parametro id e invia alla UserReadView uno user da mostrare 
 		case "READ":
@@ -113,7 +112,6 @@ public class UserController implements Controller {
 		//con REQUEST NULL (vedi una View specifica)
 		case "GETCHOICE":
 					
-					//toUpperCase() mette in maiuscolo la scelta
 			switch (choice.toUpperCase()) {
 			
 			case "L":

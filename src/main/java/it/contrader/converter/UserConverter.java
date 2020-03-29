@@ -32,7 +32,7 @@ public class UserConverter   {
 	}
 	
 	/**
-	 * Metodo per convertire le liste di User.
+	 * Metodo per convertire le liste di User in liste DTO
 	 */
 	public List<UserDTO> toDTOList(List<User> userList) {
 		//Crea una lista vuota.
