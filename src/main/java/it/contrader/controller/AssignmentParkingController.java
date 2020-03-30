@@ -126,6 +126,9 @@ public class AssignmentParkingController implements Controller{
 			default:
 				MainDispatcher.getInstance().callView("Login", null);
 			}
+		default:
+			MainDispatcher.getInstance().callView("Login", null);
+
 		}
 	}
 

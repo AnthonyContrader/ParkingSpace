@@ -80,31 +80,31 @@ public class ParkingplaceController implements Controller {
 				MainDispatcher.getInstance().callView(sub_package + "ParkingplaceInsert", null);
 				break;
 				
-				case "M":
-					MainDispatcher.getInstance().callView(sub_package + "ParkingplaceUpdate", null);
-					break;
+			case "M":
+				MainDispatcher.getInstance().callView(sub_package + "ParkingplaceUpdate", null);
+				break;
 				
-				case "C" :
-					MainDispatcher.getInstance().callView(sub_package + "ParkingplaceDelete", null);
-					break;
+			case "C" :
+				MainDispatcher.getInstance().callView(sub_package + "ParkingplaceDelete", null);
+				break;
 					
-				case "E":
-					MainDispatcher.getInstance().callView(sub_package + "Login", null);
-					break;
+			case "E":
+				MainDispatcher.getInstance().callView("Login", null);
+				break;
 					
-				case "B":
-					MainDispatcher.getInstance().callView("HomeAdmin", null);
-					break;
-					
-				default:
-					MainDispatcher.getInstance().callView("Login", null);
-				}
-				
+			case "B":
+				MainDispatcher.getInstance().callView("HomeAdmin", null);
+				break;
+			//default of switch(choice)	
 			default:
 				MainDispatcher.getInstance().callView("Login", null);
 			}
+			//default of switch(mode)		
+		default:
+		MainDispatcher.getInstance().callView("Login", null);
 		}
-	} 
+	}
+} 
 					
 				
 			
