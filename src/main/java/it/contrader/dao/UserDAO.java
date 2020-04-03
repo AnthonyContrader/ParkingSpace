@@ -124,12 +124,12 @@ public class UserDAO implements DAO<User> {
 			} catch (SQLException e) {
 				return false;
 			}
+			
 		}
-
+		
 		return false;
-
+		
 	}
-
 	public boolean delete(int id) {
 		Connection connection = ConnectionSingleton.getInstance();
 		try {

@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1" import="java.util.List"
 	import="it.contrader.dto.UserDTO"%>
+	
 <!DOCTYPE html>
 <html>
 <head>
@@ -15,6 +16,7 @@
 <div class="navbar">
   <a class="active" href="homeadmin.jsp">Home</a>
   <a href="UserServlet?mode=userlist">Users</a>
+  <a href="CarServlet?mode=carlist">Cars</a>
   <a href="LogoutServlet" id="logout">Logout</a>
 </div>
 
