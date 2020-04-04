@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1" import="java.util.List"
 	import="it.contrader.dto.UserDTO"%>
+	
 <!DOCTYPE html>
 <html>
 <head>
@@ -15,12 +16,20 @@
 <div class="navbar">
   <a class="active" href="homeadmin.jsp">Home</a>
   <a href="UserServlet?mode=userlist">Users</a>
+<<<<<<< HEAD
   <a href="ParkingplaceServlet?mode=parkingplacelist">Parkingplaces</a>
+=======
+<<<<<<< HEAD
+  <a href ="FloorServlet?mode=floorlist">Floors</a>   <!-- aggiungo la possibilita di visualizzare tutti i piani Floors -->
+=======
+  <a href="CarServlet?mode=carlist">Cars</a>
+>>>>>>> ed057a17ad3aec4027bfb646da55b17d283d0638
+>>>>>>> d4917f03c0bb961275f6f70beb853267960232c0
   <a href="LogoutServlet" id="logout">Logout</a>
 </div>
 
 <div class="main">
-<h1>Welcome ${user.getUsername()}</h1>
+<h1>Welcome ${user.getUsername()} to Parking Space</h1>
 
 "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
 "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."

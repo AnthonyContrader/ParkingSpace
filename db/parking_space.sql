@@ -27,7 +27,15 @@ CREATE TABLE `assignment_park` (
   `id_car` int NOT NULL,
   `id_parkingplace` int NOT NULL,
   PRIMARY KEY (`id`)
+<<<<<<< HEAD
 ) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+=======
+<<<<<<< HEAD
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+=======
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+>>>>>>> ed057a17ad3aec4027bfb646da55b17d283d0638
+>>>>>>> d4917f03c0bb961275f6f70beb853267960232c0
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -36,7 +44,15 @@ CREATE TABLE `assignment_park` (
 
 LOCK TABLES `assignment_park` WRITE;
 /*!40000 ALTER TABLE `assignment_park` DISABLE KEYS */;
+<<<<<<< HEAD
 INSERT INTO `assignment_park` VALUES (1,2,3),(2,4,3),(3,5,3),(5,8,8),(7,7,8),(8,12,23),(10,30,30);
+=======
+<<<<<<< HEAD
+INSERT INTO `assignment_park` VALUES (1,1,2);
+=======
+INSERT INTO `assignment_park` VALUES (1,2,3),(2,4,3),(3,5,3),(5,8,8),(7,7,8),(8,12,23),(10,30,30);
+>>>>>>> ed057a17ad3aec4027bfb646da55b17d283d0638
+>>>>>>> d4917f03c0bb961275f6f70beb853267960232c0
 /*!40000 ALTER TABLE `assignment_park` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -53,7 +69,15 @@ CREATE TABLE `bill` (
   `price` double NOT NULL,
   `is_paid` tinyint DEFAULT NULL,
   PRIMARY KEY (`id`)
+<<<<<<< HEAD
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+=======
+<<<<<<< HEAD
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+=======
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+>>>>>>> ed057a17ad3aec4027bfb646da55b17d283d0638
+>>>>>>> d4917f03c0bb961275f6f70beb853267960232c0
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -62,6 +86,13 @@ CREATE TABLE `bill` (
 
 LOCK TABLES `bill` WRITE;
 /*!40000 ALTER TABLE `bill` DISABLE KEYS */;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+INSERT INTO `bill` VALUES (1,6,6.5,0),(3,2,9,1);
+=======
+>>>>>>> ed057a17ad3aec4027bfb646da55b17d283d0638
+>>>>>>> d4917f03c0bb961275f6f70beb853267960232c0
 /*!40000 ALTER TABLE `bill` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -78,7 +109,15 @@ CREATE TABLE `car` (
   `license` varchar(45) NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `license_UNIQUE` (`license`)
+<<<<<<< HEAD
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+=======
+<<<<<<< HEAD
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+=======
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+>>>>>>> ed057a17ad3aec4027bfb646da55b17d283d0638
+>>>>>>> d4917f03c0bb961275f6f70beb853267960232c0
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -87,10 +126,47 @@ CREATE TABLE `car` (
 
 LOCK TABLES `car` WRITE;
 /*!40000 ALTER TABLE `car` DISABLE KEYS */;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+INSERT INTO `car` VALUES (1,'fiat','AO987Q'),(2,'passat','PA123S');
+=======
+>>>>>>> ed057a17ad3aec4027bfb646da55b17d283d0638
+>>>>>>> d4917f03c0bb961275f6f70beb853267960232c0
 /*!40000 ALTER TABLE `car` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+-- Table structure for table `floor`
+--
+
+DROP TABLE IF EXISTS `floor`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `floor` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `number_floor` int NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `floor`
+--
+
+LOCK TABLES `floor` WRITE;
+/*!40000 ALTER TABLE `floor` DISABLE KEYS */;
+INSERT INTO `floor` VALUES (1,1),(2,2),(3,3);
+/*!40000 ALTER TABLE `floor` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+=======
+>>>>>>> ed057a17ad3aec4027bfb646da55b17d283d0638
+>>>>>>> d4917f03c0bb961275f6f70beb853267960232c0
 -- Table structure for table `parking_place`
 --
 
@@ -102,7 +178,15 @@ CREATE TABLE `parking_place` (
   `number_place` int NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `number_place_UNIQUE` (`number_place`)
+<<<<<<< HEAD
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+=======
+<<<<<<< HEAD
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+=======
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+>>>>>>> ed057a17ad3aec4027bfb646da55b17d283d0638
+>>>>>>> d4917f03c0bb961275f6f70beb853267960232c0
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -111,6 +195,13 @@ CREATE TABLE `parking_place` (
 
 LOCK TABLES `parking_place` WRITE;
 /*!40000 ALTER TABLE `parking_place` DISABLE KEYS */;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+INSERT INTO `parking_place` VALUES (4,5),(5,16),(2,21),(1,34),(3,42);
+=======
+>>>>>>> ed057a17ad3aec4027bfb646da55b17d283d0638
+>>>>>>> d4917f03c0bb961275f6f70beb853267960232c0
 /*!40000 ALTER TABLE `parking_place` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -127,7 +218,15 @@ CREATE TABLE `user` (
   `password` varchar(45) NOT NULL,
   `usertype` varchar(45) NOT NULL,
   PRIMARY KEY (`id`)
+<<<<<<< HEAD
 ) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+=======
+<<<<<<< HEAD
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+=======
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+>>>>>>> ed057a17ad3aec4027bfb646da55b17d283d0638
+>>>>>>> d4917f03c0bb961275f6f70beb853267960232c0
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -136,7 +235,15 @@ CREATE TABLE `user` (
 
 LOCK TABLES `user` WRITE;
 /*!40000 ALTER TABLE `user` DISABLE KEYS */;
+<<<<<<< HEAD
 INSERT INTO `user` VALUES (1,'esat','123','user'),(2,'esat1','123','admin'),(4,'admin','admin','admin'),(6,'user1','pass1','admin'),(7,'utente','password','admin'),(8,'io','io','user');
+=======
+<<<<<<< HEAD
+INSERT INTO `user` VALUES (1,'Laura','111','admin'),(2,'Agnese','222','user'),(3,'admin','admin','admin'),(4,'esat','444','ADMIN');
+=======
+INSERT INTO `user` VALUES (1,'esat','123','user'),(2,'esat1','123','admin'),(4,'admin','admin','admin'),(6,'user1','pass1','admin'),(7,'utente','password','admin'),(8,'io','io','user');
+>>>>>>> ed057a17ad3aec4027bfb646da55b17d283d0638
+>>>>>>> d4917f03c0bb961275f6f70beb853267960232c0
 /*!40000 ALTER TABLE `user` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -149,4 +256,12 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
+<<<<<<< HEAD
 -- Dump completed on 2020-03-29 11:53:03
+=======
+<<<<<<< HEAD
+-- Dump completed on 2020-04-02 16:58:44
+=======
+-- Dump completed on 2020-03-29 11:53:03
+>>>>>>> ed057a17ad3aec4027bfb646da55b17d283d0638
+>>>>>>> d4917f03c0bb961275f6f70beb853267960232c0
