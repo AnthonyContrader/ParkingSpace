@@ -28,6 +28,7 @@
 
 	<table>
 		<tr>
+		    <th></th>
 			<th>Model</th>
 			<th>License</th>
 			<th></th>

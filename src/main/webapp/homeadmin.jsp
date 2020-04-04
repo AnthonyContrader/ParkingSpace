@@ -16,15 +16,10 @@
 <div class="navbar">
   <a class="active" href="homeadmin.jsp">Home</a>
   <a href="UserServlet?mode=userlist">Users</a>
-<<<<<<< HEAD
   <a href="ParkingplaceServlet?mode=parkingplacelist">Parkingplaces</a>
-=======
-<<<<<<< HEAD
   <a href ="FloorServlet?mode=floorlist">Floors</a>   <!-- aggiungo la possibilita di visualizzare tutti i piani Floors -->
-=======
   <a href="CarServlet?mode=carlist">Cars</a>
->>>>>>> ed057a17ad3aec4027bfb646da55b17d283d0638
->>>>>>> d4917f03c0bb961275f6f70beb853267960232c0
+  <a href="AssignmentParkingServlet?mode=assignmentparkinglist">Assegnazione</a>
   <a href="LogoutServlet" id="logout">Logout</a>
 </div>
 
