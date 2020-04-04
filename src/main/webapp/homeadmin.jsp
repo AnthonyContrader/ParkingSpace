@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1" import="java.util.List"
 	import="it.contrader.dto.UserDTO"%>
+	
 <!DOCTYPE html>
 <html>
 <head>
@@ -15,7 +16,11 @@
 <div class="navbar">
   <a class="active" href="homeadmin.jsp">Home</a>
   <a href="UserServlet?mode=userlist">Users</a>
+<<<<<<< HEAD
   <a href ="FloorServlet?mode=floorlist">Floors</a>   <!-- aggiungo la possibilita di visualizzare tutti i piani Floors -->
+=======
+  <a href="CarServlet?mode=carlist">Cars</a>
+>>>>>>> ed057a17ad3aec4027bfb646da55b17d283d0638
   <a href="LogoutServlet" id="logout">Logout</a>
 </div>
 

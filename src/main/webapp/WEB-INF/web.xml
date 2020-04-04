@@ -32,6 +32,7 @@
     <servlet-name>UserServlet</servlet-name>
     <url-pattern>/UserServlet</url-pattern>
   </servlet-mapping>
+<<<<<<< HEAD
    <servlet>
     <description></description>
     <display-name>FloorServlet</display-name>
@@ -41,5 +42,16 @@
   <servlet-mapping>
     <servlet-name>FloorServlet</servlet-name>
     <url-pattern>/FloorServlet</url-pattern>
+=======
+  <servlet>
+    <description></description>
+    <display-name>CarServlet</display-name>
+    <servlet-name>CarServlet</servlet-name>
+    <servlet-class>it.contrader.servlets.CarServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>CarServlet</servlet-name>
+    <url-pattern>/CarServlet</url-pattern>
+>>>>>>> ed057a17ad3aec4027bfb646da55b17d283d0638
   </servlet-mapping>
 </web-app>
