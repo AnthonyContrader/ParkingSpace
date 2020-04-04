@@ -31,7 +31,7 @@
 			<th></th>
 			<th></th>
 		</tr>
-		<%
+<%
 			for (UserDTO u : list) {
 		%>
 		<tr>
