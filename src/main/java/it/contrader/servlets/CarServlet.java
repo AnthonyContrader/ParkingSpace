@@ -1,14 +1,20 @@
 package it.contrader.servlets;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import java.io.IOException;
+import java.sql.SQLException;
+
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import it.contrader.dao.CarDAO;
 import it.contrader.dto.CarDTO;
+import it.contrader.model.Car;
 import it.contrader.service.Service;
 import it.contrader.service.CarService;
 
@@ -22,7 +28,8 @@ public class CarServlet extends HttpServlet{
 		
 	}
 	
-	public void updateList(HttpServletRequest request) {
+
+    public void updateList(HttpServletRequest request) {
 		Service<CarDTO> service = new CarService();
 		List<CarDTO>listDTO = service.getAll();
 		request.setAttribute("list", listDTO);
@@ -85,13 +92,11 @@ public class CarServlet extends HttpServlet{
 			request.setAttribute("ans", ans);
 			updateList(request);
 			getServletContext().getRequestDispatcher("/car/carmanager.jsp").forward(request, response);
-			break;
-		}
-		
+			break;		
 		
 		}
 
-	
+	}
 	
 
 }

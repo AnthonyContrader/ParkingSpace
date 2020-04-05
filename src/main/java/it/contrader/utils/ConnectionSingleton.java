@@ -24,7 +24,8 @@ public class ConnectionSingleton {
                 String dbName="parking_space";
                 String username="root";
                 String password ="root";
-                String jdbcAdditionalParams="useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC&useLegacyDatetimeCode=false";
+                String jdbcAdditionalParams="useJDBCCompliantTimezoneShift=true&useSSPSCompatibleTimezoneShift=true";
+                //String jdbcAdditionalParams="useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC&useLegacyDatetimeCode=false";
                 Class<?> c = Class.forName(driver);
                 System.out.println("Ho caricato: " + c.getName());
                 String url = "jdbc:" + vendor + "://" + host + ":" + port + "/" + dbName+"?"+jdbcAdditionalParams;

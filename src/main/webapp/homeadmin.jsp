@@ -17,7 +17,7 @@
   <a class="active" href="homeadmin.jsp">Home</a>
   <a href="UserServlet?mode=userlist">Users</a>
   <a href="ParkingplaceServlet?mode=parkingplacelist">Parkingplaces</a>
-  <a href ="FloorServlet?mode=floorlist">Floors</a>   <!-- aggiungo la possibilita di visualizzare tutti i piani Floors -->
+  <a href ="FloorServlet?mode=floorlist">Floors</a> 
   <a href="CarServlet?mode=carlist">Cars</a>
   <a href="AssignmentParkingServlet?mode=assignmentparkinglist">Assegnazione</a>
   <a href="LogoutServlet" id="logout">Logout</a>
