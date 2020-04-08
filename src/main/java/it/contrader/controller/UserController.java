@@ -38,6 +38,7 @@ public class UserController {
 		default:
 			return "index";
 		}
+		
 	}
 
 	@GetMapping("/getall")
@@ -62,7 +63,7 @@ public class UserController {
 	@PostMapping("/update")
 	public String update(HttpServletRequest request, @RequestParam("id") Long id, @RequestParam("username") String username,
 			@RequestParam("password") String password, @RequestParam("usertype") Usertype usertype) {
-
+ 
 		UserDTO dto = new UserDTO();
 		dto.setId(id);
 		dto.setUsername(username);

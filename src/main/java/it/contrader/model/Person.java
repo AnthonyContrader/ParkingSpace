@@ -21,9 +21,8 @@ public class Person {
 	@GeneratedValue (strategy = GenerationType.IDENTITY)
 	private Long id;
 	
-	@Column (unique = true)
-	
-	private String firstname;
-	
-	private String lastname;
+	@Column 
+	private String firstName;
+	@Column
+	private String secondName;
 }

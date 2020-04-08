@@ -1,12 +1,14 @@
 /* Main Layout */
 html {
-  scroll-behavior: smooth;
+	scroll-behavior: smooth;
 }
+
 * {
 	font-family: sans-serif;
 }
-div.text{
-	clear:both;
+
+div.text {
+	clear: both;
 	margin-top: 3%;
 	margin-bottom: 3%;
 }
@@ -36,7 +38,7 @@ div.text{
 	border-radius: 7px;
 	position: relative;
 	padding: 3px;
-	clear:both;
+	clear: both;
 	margin-top: 5%;
 	margin-bottom: 1%;
 }
@@ -56,39 +58,37 @@ h2 {
 }
 
 /*Login*/
-
-.log{
-	width:95%;
-	z-index:-1;
-	opacity:0.4;
-	position:absolute;
-
-	
+.log {
+	width: 95%;
+	z-index: -1;
+	opacity: 0.4;
+	position: absolute;
 }
-.login{
-	position:fixed;
-	heigth:50%;
-	width:20%;
-	margin-left:35.6%;
-	margin-right:44.4%;
-	margin-top:10%;
-	margin-bottom:auto;
-	z-index:1;
+
+.login {
+	position: fixed;
+	heigth: 50%;
+	width: 20%;
+	margin-left: 35.6%;
+	margin-right: 44.4%;
+	margin-top: 10%;
+	margin-bottom: auto;
+	z-index: 1;
 }
 
 .login input {
 	text-align: center;
 	float: center;
 	clear: both;
-	width:90%;
-	margin-left:5%;
-	margin-right:5%;
+	width: 90%;
+	margin-left: 5%;
+	margin-right: 5%;
 }
 
 .login label {
 	float: center;
 	clear: both;
-	width:100%;
+	width: 100%;
 	text-align: center;
 }
 
@@ -122,11 +122,10 @@ a:visited {
 table {
 	border-collapse: collapse;
 	width: 50%;
-	float:left;
-	border-radius:4px;
-    -moz-border-radius:4px;
+	float: left;
+	border-radius: 4px;
+	-moz-border-radius: 4px;
 }
-
 
 th, td {
 	text-align: center;
@@ -140,59 +139,52 @@ tr:nth-child(even) {
 th {
 	background-color: #00a990;
 	color: #ffffff;
-	
 }
 
 a:hover {
 	color: #999999;
 }
 
-
 /*Forms*/
-
 select {
-  width: 100%;
-  padding: 14px 20px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  background-color: #f2f2f2;
-  margin: 8px 0;
+	width: 100%;
+	padding: 14px 20px;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	background-color: #f2f2f2;
+	margin: 8px 0;
 }
+
 select:hover {
-  background-color:  #00ccad;
+	background-color: #00ccad;
 }
 
-option{
-width: 100%;
-  background-color: #ffff;
-  color: #000000;
-  padding: 14px 20px;
-  margin: 8px 0;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  cursor: pointer;
-	
+option {
+	width: 100%;
+	background-color: #ffff;
+	color: #000000;
+	padding: 14px 20px;
+	margin: 8px 0;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	cursor: pointer;
 }
-
-
-
 
 input {
-  width: 80%;
-  background-color: #ffff;
-  color: #000000;
-  padding: 14px 20px;
-  margin: 8px 0;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  cursor: pointer;
-  float:right;
+	width: 80%;
+	background-color: #ffff;
+	color: #000000;
+	padding: 14px 20px;
+	margin: 8px 0;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	cursor: pointer;
+	float: right;
 }
 
 input:hover {
-  background-color:  #00ccad;
+	background-color: #00ccad;
 }
-
 
 res {
 	float: left;
@@ -201,7 +193,7 @@ res {
 	background-color: #00a990;
 	border-radius: 7px;
 	color: #ffffff;
-	text-align:center;
+	text-align: center;
 }
 
 form {
@@ -212,56 +204,53 @@ form {
 }
 
 .col-25 {
-  float: left;
-  width: 25%;
-  margin-top: 6px;
+	float: left;
+	width: 25%;
+	margin-top: 6px;
 }
 
 .col-75 {
-  float: left;
-  width: 75%;
-  margin-top: 6px;
+	float: left;
+	width: 75%;
+	margin-top: 6px;
 }
 
 /* Clear floats after the columns */
 .row:after {
-  content: "";
-  display: table;
-  clear: both;
+	content: "";
+	display: table;
+	clear: both;
 }
 
 label {
-  padding: 12px 12px 12px 0;
-  display: inline-block;
+	padding: 12px 12px 12px 0;
+	display: inline-block;
 }
 
-
 button {
-  -webkit-transition-duration: 0.1s; /* Safari */
-  transition-duration: 0.1s;
-  background-color:  #00a990;
-  border: none;
-  color: white;
-  padding: 3% 3%;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 130%;
-  margin-left: 10%;
-  margin-right: 10%;
-  margin-top: 5%;
-  margin-bottom: 5%;
-  cursor: pointer;
-  border-radius: 7px;
-  width:80%;
+	-webkit-transition-duration: 0.1s; /* Safari */
+	transition-duration: 0.1s;
+	background-color: #00a990;
+	border: none;
+	color: white;
+	padding: 3% 3%;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 130%;
+	margin-left: 10%;
+	margin-right: 10%;
+	margin-top: 5%;
+	margin-bottom: 5%;
+	cursor: pointer;
+	border-radius: 7px;
+	width: 80%;
 }
 
 button:hover {
-  background-color:  #00ccad; 
-  color: white;
+	background-color: #00ccad;
+	color: white;
 }
-
-
 
 /*IDs*/
 #logout {
@@ -270,16 +259,19 @@ button:hover {
 }
 
 #floatleft {
-	float:left;
+	float: left;
 }
+
 #floatright {
-	float:right;
+	float: right;
 }
+
 #floattop {
-	float:top;
+	float: top;
 }
+
 #floatright {
-	float:bottom;
+	float: bottom;
 }
 
 /*Navigation bar*/
@@ -319,9 +311,11 @@ div.navbar a.active {
 
 /*Images*/
 .imgheader {
-	position: center; z-index : -1;
+	position: center;
+	z-index: -1;
 	opacity: .9;
-	z-index: -1; opacity : .9;
+	z-index: -1;
+	opacity: .9;
 	width: 8%;
 }
 }
