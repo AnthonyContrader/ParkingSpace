@@ -14,21 +14,13 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @Data
 @Entity
-public class User {
-
-	public enum Usertype {
-		ADMIN, USER
-	}
+public class Floor {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
-
-	@Column(unique = true) //username dev'essere diverso
-	private String username;
-
-	private String password;
-
-	private Usertype usertype;   //usertype dichiarato alla riga 19
-
+	
+	@Column(unique=true)  //non voglio due piani con lo stesso nome
+	private int numberfloor; 
+	
 }

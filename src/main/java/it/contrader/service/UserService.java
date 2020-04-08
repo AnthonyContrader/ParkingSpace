@@ -12,7 +12,7 @@ import it.contrader.model.User;
 @Service
 public class UserService extends AbstractService<User, UserDTO> {
 
-	@Autowired
+	@Autowired   //sfruttando le reflections costruisce tutto lui == fa il costruttore e crea le dipendenze
 	private UserConverter converter;
 	@Autowired
 	private UserRepository repository;
@@ -22,3 +22,6 @@ public class UserService extends AbstractService<User, UserDTO> {
 	}
 
 }
+
+
+//reflections permette di creare metodi in tempo di runtime
