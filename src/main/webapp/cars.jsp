@@ -22,29 +22,31 @@
 	<div class="main">
 		<%
 		List<CarDTO> list = (List<CarDTO>) request.getSession().getAttribute("list");
+		System.out.println(list.get(1).toString());
 		%>
 
 		<br>
 
 		<table>
 			<tr>
-				<th>Model</th>
+			    <th>Model</th>
 				<th>License</th>
 				<th></th>
 				<th></th>
 			</tr>
 			<%
 				for (CarDTO c : list) {
+				
 			%>
 			<tr>
-				<td><a href="/car/read?id=<%=c.getId()%>"> <%=c.getModel()%>
+				<td><a href="/car/read?id=<%=c.getModel()%>"> <%=c.getModel()%>
 				</a></td>
 				<td><%=c.getLicense()%></td>
 			
-				<td><a href="/car/preupdate?id=<%=c.getId()%>">Edit</a></td>
+				<td><a href="/car/preupdate?id=<%=c.getLicense()%>">Edit</a></td>
 
 
-				<td><a href="/car/delete?id=<%=c.getId()%>">Delete</a></td>
+				<td><a href="/car/delete?id=<%=c.getLicense()%>">Delete</a></td>
 
 			</tr>
 			<%

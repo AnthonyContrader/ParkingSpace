@@ -30,13 +30,11 @@
 
 		<table>
 			<tr>
-				<th>ID</th>
 				<th>Model</th>
 				<th>License</th>
 				
 			</tr>
 			<tr>
-				<td><%=c.getId()%></td>
 				<td><%=c.getModel()%></td>
 				<td><%=c.getLicense()%></td>
 			</tr>

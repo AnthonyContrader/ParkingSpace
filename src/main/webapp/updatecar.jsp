@@ -38,17 +38,8 @@
     </div>
   </div>
   <div class="row">
-    <div class="col-25">
-     <label for="lic">License</label>
-    </div>
-    <div class="col-75">
-      <input
-			type="text" id="lic" name="license" value=<%=c.getLicense()%>> 
-    </div>
-
-  
-   		 
-    	<input type="hidden" name="id" value =<%=c.getId() %>>
+   
+    	<input type="hidden" name="id" value =<%=c.getLicense() %>>
   </div>
       <button type="submit" >Edit</button>
 </form>

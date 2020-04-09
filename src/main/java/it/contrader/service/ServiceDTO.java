@@ -13,5 +13,7 @@ public interface ServiceDTO<DTO> {
 	public DTO update(DTO dto);
 
 	public void delete(long id);
+	
+
 
 }

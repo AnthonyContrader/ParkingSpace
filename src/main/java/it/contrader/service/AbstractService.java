@@ -13,6 +13,7 @@ public abstract class AbstractService<Entity, DTO> implements ServiceDTO<DTO> {
 
 	@Autowired
 	protected CrudRepository<Entity, Long> crudRepository;
+	
 	@Autowired
 	protected Converter<Entity, DTO> converter;
 
@@ -33,6 +34,13 @@ public abstract class AbstractService<Entity, DTO> implements ServiceDTO<DTO> {
 	public DTO read(long id) {
 		return converter.toDTO(crudRepository.findById(id).get());
 	}
+	
+	/*
+	 * @SuppressWarnings("unchecked") public DTO read(String license) { //Car
+	 * car=(Car) crudRepository.findAll().iterator().next(); Optional<Entity> car =
+	 * crudCar.findById(license); return converter.toDTO((Entity) car); }
+	 */
+	
 
 	@Override
 	public DTO update(DTO dto) {
@@ -43,5 +51,6 @@ public abstract class AbstractService<Entity, DTO> implements ServiceDTO<DTO> {
 	public void delete(long id) {
 		crudRepository.deleteById(id);
 	}
-
+   
+    
 }

@@ -15,34 +15,14 @@ import it.contrader.service.CarService;
 @Controller
 
 // mappa la request HTTP ai metodi di gestione MVC
-@RequestMapping("/car")
 
+@RequestMapping("/car")
 public class CarController {
 	
 	@Autowired
 	private CarService service;
 	
-	//@PostMapping("/login")
-	//public String login(HttpServletRequest request, 
-			//@RequestParam(value = "model", required = true) String model,
-			//@RequestParam(value = "license", required = true) String license) {
-
-		//CarDTO carDTO = service.findByModelAndLicense(model, license);
-		//request.getSession().setAttribute("car", carDTO);
-
-		//switch (userDTO.getUsertype()) {
-
-		//case ADMIN:
-			//return "homeadmin";
-
-		//case USER:
-			//return "index";
-
-		//default:
-			//return "index";
-		//}
-
-// gestisce la richiesta di get
+	
 	@GetMapping("/getall")
 	public String getAll(HttpServletRequest request) {
 		setAll(request);
@@ -50,39 +30,41 @@ public class CarController {
 	}
 
 	@GetMapping("/delete")
-	public String delete(HttpServletRequest request, @RequestParam("id") Long id) {
-		service.delete(id);
+	public String delete(HttpServletRequest request, @RequestParam(name="id") String license) {
+		System.out.println("Sono nel delete di car controller");
+		service.delete(license);
 		setAll(request);
 		return "cars";
 	}
 
 	@GetMapping("/preupdate")
-	public String preUpdate(HttpServletRequest request, @RequestParam("id") Long id) {
-		request.getSession().setAttribute("dto", service.read(id));
+	public String preUpdate(HttpServletRequest request, @RequestParam("id") String license) {
+		System.out.println("sono nel preupdate di carcontroller ");
+		request.getSession().setAttribute("dto", service.findCar(license));
 		return "updatecar";
 	}
 	
 	// scorciatoia per RequestMapping gestisce la richiesta post HTTP
 
 	@PostMapping("/update")
-	public String update(HttpServletRequest request, 
-			@RequestParam("id") Long id, 
-			@RequestParam("model") String model,
-			@RequestParam("license") String license) {
-
-		CarDTO dto = new CarDTO();
-		dto.setId(id);
+	public String update(HttpServletRequest request, @RequestParam("model") String model, @RequestParam("id") String license) {
+		System.out.println("sono nel update di carcontroller riga 50");
+		CarDTO dto = service.findCar(license);
 		dto.setModel(model);
-		dto.setLicense(license);
+		//dto.setLicense(license);
 		service.update(dto);
 		setAll(request);
+		System.out.println("sono nel update di carcontroller");
 		return "cars";
 		}
 
 	@PostMapping("/insert")
 	public String insert(HttpServletRequest request, 
 			@RequestParam("model") String model,
-			@RequestParam("license") String license) {
+			@RequestParam("license") String license) throws Exception {
+		if(service.findCar(license)!=null) {
+			return "homeadmin";
+		}
 		CarDTO dto = new CarDTO();
 		dto.setModel(model);
 		dto.setLicense(license);
@@ -92,9 +74,8 @@ public class CarController {
 	}
 
 	@GetMapping("/read")
-	public String read(HttpServletRequest request, 
-			@RequestParam("id") Long id) {
-		request.getSession().setAttribute("dto", service.read(id));
+	public String read(HttpServletRequest request, @RequestParam("license") String license) {
+		request.getSession().setAttribute("dto", service.findCar(license));
 		return "readcar";
 	}
 

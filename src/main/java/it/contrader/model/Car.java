@@ -2,8 +2,6 @@ package it.contrader.model;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 import lombok.AllArgsConstructor;
@@ -18,14 +16,9 @@ import lombok.NoArgsConstructor;
 public class Car {
 	
 	@Id
-	@GeneratedValue (strategy = GenerationType.IDENTITY)
-	
-	private Long id;
-	
-	@Column (unique = true)
+	@Column(name="license", nullable=false)
+	private String license;
 	
 	private String model;
-	
-	private String license;
 
 }
