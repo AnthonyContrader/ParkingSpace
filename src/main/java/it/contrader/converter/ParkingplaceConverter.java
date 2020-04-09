@@ -12,7 +12,7 @@ public class ParkingplaceConverter extends AbstractConverter<Parkingplace, Parki
 	public Parkingplace toEntity(ParkingplaceDTO parkingplaceDTO) {
 		Parkingplace parkingplace = null;
 		if(parkingplaceDTO != null) {
-			parkingplace = new Parkingplace(parkingplaceDTO.getId(), parkingplaceDTO.getNumberplace());
+			parkingplace = new Parkingplace(parkingplaceDTO.getId(), parkingplaceDTO.getNumberplace(), parkingplaceDTO.getFloor());
 		}
 		return parkingplace;
 	}
@@ -21,7 +21,7 @@ public class ParkingplaceConverter extends AbstractConverter<Parkingplace, Parki
 	public ParkingplaceDTO toDTO(Parkingplace parkingplace) {
 	ParkingplaceDTO parkingplaceDTO = null;
 	if(parkingplace != null) {
-		parkingplaceDTO = new ParkingplaceDTO(parkingplace.getId(), parkingplace.getNumberplace());
+		parkingplaceDTO = new ParkingplaceDTO(parkingplace.getId(), parkingplace.getNumberplace(), parkingplace.getFloor());
 	}
 		return parkingplaceDTO;
 	}

@@ -1,5 +1,6 @@
 package it.contrader.dto;
 
+import it.contrader.model.Floor;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -15,6 +16,6 @@ public class ParkingplaceDTO {
 	
 	private int numberplace;
 	
-	
+	private Floor floor;
 
 }

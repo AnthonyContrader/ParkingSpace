@@ -63,7 +63,9 @@ public class FloorController {
 	
 	@PostMapping("/update")
 	public String update(HttpServletRequest request ,@RequestParam("id") Long id , @RequestParam("number_floor") int number_floor) {
-		FloorDTO floorUpdate = new FloorDTO(id , number_floor);
+		FloorDTO floorUpdate = new FloorDTO();
+		floorUpdate.setId(id);
+		floorUpdate.setNumberfloor(number_floor);
 		service.update(floorUpdate);
 		setAll(request);
 		return "floors";
