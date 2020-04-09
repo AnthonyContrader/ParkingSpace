@@ -1,7 +1,7 @@
 package it.contrader.model;
 
-import java.sql.Date;
-import java.sql.Time;
+
+import java.util.Date;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
@@ -34,21 +34,17 @@ public class AssignmentParking {
 	@JoinColumn(name="car_license", referencedColumnName="license")
 	@OneToOne(cascade = CascadeType.ALL)
 	private Car car;
-	
 	@OneToOne(cascade = CascadeType.ALL)
 	@JoinColumn(name="id_parkingplace", referencedColumnName="id")
 	private Parkingplace parkingplace;
 	
-	/*
-	 * @Temporal(TemporalType.DATE)
-	 * 
-	 * @Column(name="entryDate") private Date entryDate;
-	 */
 	
-	/*
-	 * @Temporal(TemporalType.TIME)
-	 * 
-	 * @Column(name="entryTime") private Time entryTime;
-	 */
+	  @Temporal(TemporalType.DATE)
+	  @Column(name="entryDate") 
+	  private Date entryDate;
+	  @Temporal(TemporalType.TIME)
+	  @Column(name="entryTime")
+	  private Date entryTime;
+	
 	
 }
