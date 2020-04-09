@@ -12,7 +12,7 @@ public class PersonConverter extends AbstractConverter<Person, PersonDTO>{
 	public Person toEntity(PersonDTO personDDTO) {
 		Person person = null;
 		if(personDDTO!=null) {
-		    person = new Person(personDDTO.getId(), personDDTO.getFirstName(),personDDTO.getSecondName());
+		    person = new Person (personDDTO.getId(), personDDTO.getFirstName(),personDDTO.getSecondName(), personDDTO.getCars());
 		}
 		return person;
 	}
@@ -21,7 +21,7 @@ public class PersonConverter extends AbstractConverter<Person, PersonDTO>{
 	public PersonDTO toDTO(Person person) {
 	    PersonDTO personDTO = null;
 	    if(person!=null) {
-		    personDTO = new PersonDTO(person.getId(), person.getFirstName(), person.getSecondName());
+		    personDTO = new PersonDTO(person.getId(), person.getFirstName(), person.getSecondName(), person.getCars());
 	    }
 	    return personDTO;
 	}

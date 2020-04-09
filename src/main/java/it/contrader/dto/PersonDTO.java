@@ -1,5 +1,8 @@
 package it.contrader.dto;
 
+import java.util.Set;
+
+import it.contrader.model.Car;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -7,6 +10,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 @Data
+
 public class PersonDTO {
     
 	private Long id;
@@ -14,4 +18,6 @@ public class PersonDTO {
 	private String firstName;
 	
 	private String secondName;
+	
+	private Set<Car> cars;
 }

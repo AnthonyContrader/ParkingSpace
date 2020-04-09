@@ -1,7 +1,6 @@
 package it.contrader.dto;
 
-import javax.persistence.Id;
-
+import it.contrader.model.Person;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -13,7 +12,10 @@ public class CarDTO {
 	
     
 	private String license;
+	
 	private String model;
+	
+	private Person person;
 	
 
 }

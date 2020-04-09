@@ -22,7 +22,6 @@
 	<div class="main">
 		<%
 		List<CarDTO> list = (List<CarDTO>) request.getSession().getAttribute("list");
-		System.out.println(list.get(1).toString());
 		%>
 
 		<br>

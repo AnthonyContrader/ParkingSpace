@@ -24,7 +24,9 @@
 		<a class="active" href="/homeadmin.jsp">Home</a> <a href=/user/getall>Users</a>
 		<a href=/car/getall>Cars</a>
 		<a href=/person/getall>Persons</a>
-		<a href="/user/logout" id="logout">Logout</a>
+		<a href=/parkingspace/getall>Parkingspaces</a>
+		<a href=/floor/getall>Floors</a>
+		<a href="/assignment/logout" id="logout">Assegnazioni</a>
 	</div>
 
 	<div class="main">
