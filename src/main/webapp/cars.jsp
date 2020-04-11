@@ -54,7 +54,6 @@
 		</table>
 
 
-
 		<form id="floatright" action="/car/insert" method="post">
 			<div class="row">
 				<div class="col-25">
@@ -69,14 +68,44 @@
 				<div class="col-25">
 					<label for="lic">License</label>
 				</div>
-				<div class="col-75">
+				<div class="col-25">
+					<input type="text" id="lic" name="license"
+						placeholder="inserisci targa">
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-25">
+					<label for="prop">Person</label>
+				</div>
+				<div class="col-25">
+					<input type="text" id="prop" name="proprietario"
+						placeholder="inserisci proprietario">
+			</div>
+			</div>
+			
+			<button type="submit">Insert</button>
+		</form>
+		
+		<br> <br> <br> <br><br> 
+		<br><br> <br><br> <br>
+		<br> <br> <br> <br><br> 
+		<br><br> <br><br> <br>
+		<br><br> <br><br> <br>
+		
+		<form id="floatright" action="/car/read" >
+			
+			<div class="row">
+				<div class="col-25">
+					<label for="lic">License</label>
+				</div>
+				<div class="col-25">
 					<input type="text" id="lic" name="license"
 						placeholder="inserisci targa">
 				</div>
 			</div>
 			
-			<button type="submit">Insert</button>
-			
+			<button type="submit">Check</button>
+		
 		</form>
 
 	</div>

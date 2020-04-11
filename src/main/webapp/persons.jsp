@@ -69,7 +69,7 @@
 			    		<div class="col-25">
 			    			<input type="text" id="sname" name="secondName" >
 			    		</div>
-			    				   placeholder="inserisci secondName">
+			    				 
 			    		</div>
 			    		<button type="submit">Insert</button>
 			    </form>

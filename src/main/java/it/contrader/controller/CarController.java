@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import it.contrader.dto.CarDTO;
+import it.contrader.model.Person;
 import it.contrader.service.CarService;
 
 @Controller
@@ -60,18 +61,21 @@ public class CarController {
 
 	@PostMapping("/insert")
 	public String insert(HttpServletRequest request, 
+			@RequestParam("proprietario") Person idProprietario,
 			@RequestParam("model") String model,
 			@RequestParam("license") String license) throws Exception {
 		if(service.findCar(license)!=null) {
 			return "homeadmin";
 		}
 		CarDTO dto = new CarDTO();
+		dto.setPerson(idProprietario);
 		dto.setModel(model);
 		dto.setLicense(license);
 		service.insert(dto);
 		setAll(request);
 		return "cars";
 	}
+	
 
 	@GetMapping("/read")
 	public String read(HttpServletRequest request, @RequestParam("license") String license) {

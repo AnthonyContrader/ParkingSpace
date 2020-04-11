@@ -32,11 +32,14 @@
 			<tr>
 				<th>Model</th>
 				<th>License</th>
-				
+				<th>Nome Proprietario</th>	
+				<th>Cognome Proprietario</th>	
 			</tr>
 			<tr>
 				<td><%=c.getModel()%></td>
 				<td><%=c.getLicense()%></td>
+				<td><%=c.getPerson().getFirstName()%></td>
+				<td><%=c.getPerson().getSecondName()%> </td>
 			</tr>
 		</table>
 

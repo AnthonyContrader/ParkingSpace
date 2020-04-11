@@ -26,7 +26,8 @@
 		<a href=/person/getall>Persons</a>
 		<a href=/parkingspace/getall>Parkingspaces</a>
 		<a href=/floor/getall>Floors</a>
-		<a href="/assignment/logout" id="logout">Assegnazioni</a>
+		<a href=/assignment/getall>Assegnazioni</a>
+		<a href="/user/logout" id="logout">Logout</a>
 	</div>
 
 	<div class="main">
