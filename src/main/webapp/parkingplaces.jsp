@@ -17,7 +17,7 @@
 
 	<div class="navbar">
 		<a href="/homeadmin.jsp">Home</a> <a class="active"
-			href="/parkingplace/getall">Parkingplaces</a> <a href="/parkingplace/logout" id="logout">Logout</a>
+			href="/parkingplace/getall">Parkingplaces</a> <a href="/user/logout" id="logout">Logout</a>
 	</div>
 	<div class="main">
 		<%
@@ -30,6 +30,7 @@
 			<tr>
 			    <th></th>
 				<th>Numberplace</th>
+				<th>Floor</th>
 				<th></th>
 				<th></th>
 			</tr>
@@ -37,11 +38,12 @@
 				for (ParkingplaceDTO p : list) {
 			%>
 			<tr>
-				<td><a href=/parkingplace/read?id=<%=p.getId()%>>
+				<td><a href="/parkingplace/read?id=<%=p.getId()%>">
 				</a></td>
 				<td><%=p.getNumberplace()%></td>
+				<td><%=p.getFloor().getNumberfloor()%></td>
 				<td><a href="/parkingplace/preupdate?id=<%=p.getId()%>">Edit</a></td>
-				
+	
 				<td><a href="/parkingplace/delete?id=<%=p.getId()%>">Delete</a></td>
 
 			</tr>
@@ -49,20 +51,28 @@
 				}
 			%>
 		</table>
-
-
+</div>
+<div>
 <form id="floatright" action="/parkingplace/insert" method="post">
 			<div class="row">
 				<div class="col-25">
-					<label for="user">Numberplace</label>
+					<label for="np">Numberplace</label>
 				</div>
 				<div class="col-75">
-					<input type="text" id="parkingplace" name="numberplace"
+					<input type="text" id="np" name="numberplace"
 						placeholder="inserisci numberplace">
 				</div>
+				<div class="col-25">
+					<label for="floo">Floor</label>
 				</div>
-<button type="submit">Insert</button>
-		</form>
+				<div class="col-75">
+					<input type="text" id="floo" name="floor"
+						placeholder="inserisci floor">
+				</div>
+				
+				</div>
+                       <button type="submit">Insert</button>
+</form>
 
 	</div>
 	<br>

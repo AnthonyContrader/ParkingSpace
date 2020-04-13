@@ -15,7 +15,7 @@
 <%@ include file ="./css/header.jsp"%>
 <div class="navbar">
      <a href="/homeadmin.jsp">Home</a> <a class = "active"
-          href="/parkingplace/getall">Parkingplaces</a> <a href = "/parkingplace/Logout" id = "Logout">Logout</a>
+          href="/parkingplace/getall">Parkingplaces</a> <a href = "/user/Logout" id = "Logout">Logout</a>
 </div>
 <br>
 	<div class="main">
@@ -27,8 +27,10 @@
 		<table>
 			<tr>
 				<th>Numberplace</th>
+				<th>IdFloor</th>
 			</tr>
 			<tr>
+				<td><%p.getFloor().getId()%></td>
 				<td><%=p.getNumberplace()%></td>	
 			</tr>
 		</table>

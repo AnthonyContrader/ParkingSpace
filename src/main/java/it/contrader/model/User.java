@@ -5,6 +5,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToOne;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -30,5 +32,12 @@ public class User {
 	private String password;
 
 	private Usertype usertype;   //usertype dichiarato alla riga 19
+	
+	/*
+	 * @OneToOne
+	 * 
+	 * @JoinColumn(name="id_person", referencedColumnName="id") private Person
+	 * person;
+	 */
 
 }

@@ -1,5 +1,6 @@
 package it.contrader.dto;
 
+import it.contrader.model.Person;
 import it.contrader.model.User.Usertype;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -17,5 +18,5 @@ public class UserDTO {
 	private String password;
 
 	private Usertype usertype;
-
+	
 }

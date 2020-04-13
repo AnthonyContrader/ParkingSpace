@@ -13,7 +13,8 @@ public class UserConverter extends AbstractConverter<User, UserDTO> {
 	public User toEntity(UserDTO userDTO) {
 		User user = null;
 		if (userDTO != null) {
-			user = new User(userDTO.getId(), userDTO.getUsername(), userDTO.getPassword(), userDTO.getUsertype());
+			user = new User(userDTO.getId(), userDTO.getUsername(), userDTO.getPassword(), userDTO.getUsertype()
+					);
 		}
 		return user;
 	}

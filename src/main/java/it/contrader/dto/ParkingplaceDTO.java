@@ -8,8 +8,6 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-
-
 public class ParkingplaceDTO {
 	
 	private Long id;
@@ -17,5 +15,7 @@ public class ParkingplaceDTO {
 	private int numberplace;
 	
 	private Floor floor;
+	
+	
 
 }

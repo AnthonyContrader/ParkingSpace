@@ -12,7 +12,7 @@ public class FloorConverter extends AbstractConverter <Floor , FloorDTO> {
 	public Floor toEntity(FloorDTO floorDTO) {
 		Floor floor = null;
 		if (floorDTO != null) {
-			 floor = new Floor(floorDTO.getId() , floorDTO.getNumberfloor(), floorDTO.getParking_place());
+			 floor = new Floor(floorDTO.getId() , floorDTO.getNumberfloor(), floorDTO.getParkinglaces());
 			}
 		return floor;
 	}
@@ -21,7 +21,7 @@ public class FloorConverter extends AbstractConverter <Floor , FloorDTO> {
 	public FloorDTO toDTO(Floor floor) {
 		FloorDTO floorDTO = null;
 		if (floor != null) {
-			floorDTO = new FloorDTO(floor.getId() , floor.getNumberfloor(), floor.getParking_place());
+			floorDTO = new FloorDTO(floor.getId() , floor.getNumberfloor(), floor.getParkingplaces());
 			}
 		return floorDTO;
 	}

@@ -29,6 +29,9 @@ public class CarService //extends AbstractService<Car, CarDTO>
 	public CarDTO findCar(String license) {
 		return converter.toDTO(repository.findByLicense(license));
 	}
+	public List<CarDTO> findCars(String model){
+		return converter.toDTOList(repository.findCarsByModel(model));
+	}
 	public List<CarDTO> getAll(){
 		return converter.toDTOList((repository.findAll()));
 	}

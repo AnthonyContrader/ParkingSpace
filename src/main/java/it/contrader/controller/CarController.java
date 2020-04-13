@@ -1,5 +1,7 @@
 package it.contrader.controller;
 
+import java.util.List;
+
 import javax.servlet.http.HttpServletRequest;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -9,9 +11,11 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import it.contrader.converter.PersonConverter;
 import it.contrader.dto.CarDTO;
-import it.contrader.model.Person;
+import it.contrader.dto.PersonDTO;
 import it.contrader.service.CarService;
+import it.contrader.service.PersonService;
 
 @Controller
 
@@ -22,11 +26,15 @@ public class CarController {
 	
 	@Autowired
 	private CarService service;
-	
+	@Autowired
+	private PersonService personService;
+	@Autowired
+	private PersonConverter converter;
 	
 	@GetMapping("/getall")
 	public String getAll(HttpServletRequest request) {
 		setAll(request);
+		int a=5;
 		return "cars";
 	}
 
@@ -40,7 +48,6 @@ public class CarController {
 
 	@GetMapping("/preupdate")
 	public String preUpdate(HttpServletRequest request, @RequestParam("id") String license) {
-		System.out.println("sono nel preupdate di carcontroller ");
 		request.getSession().setAttribute("dto", service.findCar(license));
 		return "updatecar";
 	}
@@ -60,27 +67,33 @@ public class CarController {
 		}
 
 	@PostMapping("/insert")
-	public String insert(HttpServletRequest request, 
-			@RequestParam("proprietario") Person idProprietario,
-			@RequestParam("model") String model,
-			@RequestParam("license") String license) throws Exception {
+	public String insert(HttpServletRequest request, @RequestParam("model") String model, 
+			@RequestParam("license") String license,
+			@RequestParam("nome")String nome, @RequestParam("cognome")String cognome) throws Exception {
 		if(service.findCar(license)!=null) {
 			return "homeadmin";
 		}
 		CarDTO dto = new CarDTO();
-		dto.setPerson(idProprietario);
+		//PersonDTO personDTO = new PersonDTO();
+		
 		dto.setModel(model);
 		dto.setLicense(license);
+		dto.setPerson(converter.toEntity(personService.findByFirstNameAndSecondName(nome, cognome)));
 		service.insert(dto);
 		setAll(request);
 		return "cars";
 	}
-	
 
 	@GetMapping("/read")
-	public String read(HttpServletRequest request, @RequestParam("license") String license) {
+	public String read(HttpServletRequest request, @RequestParam("id") String license) {
 		request.getSession().setAttribute("dto", service.findCar(license));
 		return "readcar";
+	}
+
+	@GetMapping("/readByModel")
+	public String readByModel(HttpServletRequest request, @RequestParam("id") String model) {
+		request.getSession().setAttribute("dto", service.findCars(model));
+		return "readbymodelcars";
 	}
 
 	@GetMapping("/logout")
@@ -90,6 +103,11 @@ public class CarController {
 	}
 
 	private void setAll(HttpServletRequest request) {
+		/*
+		 * List<CarDTO> lists=service.findCars("Maserati");
+		 * System.out.println("Ci sono maseratii:  "+lists.size());
+		 * request.getSession().setAttribute("dto", service.findCars("Maserati"));
+		 */
 		request.getSession().setAttribute("list", service.getAll());
 	}
 

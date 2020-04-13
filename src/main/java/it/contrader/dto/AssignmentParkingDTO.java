@@ -1,5 +1,7 @@
 package it.contrader.dto;
 
+import java.time.LocalDate;
+import java.time.LocalTime;
 import java.util.Date;
 
 import it.contrader.model.Car;
@@ -13,13 +15,18 @@ import lombok.NoArgsConstructor;
 @Data
 public class AssignmentParkingDTO {
 	
-	public Long id;
+	private Long id;
 	
-	public Car car;
+	private Car car;
 	
-	public Parkingplace park;
+	private Parkingplace park;
 	
-	public Date entryDate;
+	private Date entryDate;
 	
-	public Date entryTime;
+	private Date entryTime;
+	
+	public void setDate() {
+		this.entryDate=java.sql.Date.valueOf(LocalDate.now());
+		this.entryTime=java.sql.Time.valueOf(LocalTime.now());
+	}
 }

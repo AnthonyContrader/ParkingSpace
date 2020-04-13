@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1" import="it.contrader.dto.AssignmentParkingDTO" import="java.util.*"%>
+    pageEncoding="ISO-8859-1" import="it.contrader.dto.AssignmentParkingDTO" import="java.util.*"
+    						  import="it.contrader.dto.CarDTO"
+    						  import="it.contrader.dto.ParkingplaceDTO"%>
 <html>
 <head>
 <meta charset="utf-8">
@@ -17,37 +19,44 @@
 
 	<div class="navbar">
 		<a href="/homeadmin.jsp">Home</a> <a class="active"
-			href="/assignmentParking/getall">Assignments</a> <a href="/car/logout" id="logout">Logout</a>
+			href="/assignmentParking/getall">Assignments</a> <a href="/user/logout" id="logout">Logout</a>
 	</div>
 	<div class="main">
 		<%
 		List<AssignmentParkingDTO> list = (List<AssignmentParkingDTO>) request.getSession().getAttribute("list");
+		//System.out.println("size of assiList: "+ list.size());
+		//List<CarDTO> carList            = (List<CarDTO>) request.getSession().getAttribute("carList");
+		//System.out.println("size di carlist:" + carList.size());
+    	//List<ParkingplaceDTO> pList     = (List<ParkingplaceDTO>) request.getAttribute("parkList");
+    	//System.out.println("size of pp list: "+pList.size());
 		%>
 
 		<br>
 
 		<table>
 			<tr>
+				<th>ID</th>
 			    <th>car</th>
 				<th>PostoAuto</th>
 				<th>entryDate</th>
 				<th>entryTime</th>
+				<th></th>
+				<th></th>
 			</tr>
 			<%
 				for (AssignmentParkingDTO apd : list) {
 				
 			%>
 			<tr>
-				<td><a href="/car/read?id=<%=apd.getId()%>"> <%=apd.getId()%>
-				</a></td>
-				<td><%=apd.getCar()%></td>
-				<td><%=apd.getPark()%></td>
+				<td><a href="/assignmentParking/read?id=<%=apd.getId()%>"> <%=apd.getId()%></a></td>
+				<td><%=apd.getCar().getLicense()%></td>
+				<td><%=apd.getPark().getNumberplace()%></td>
 				<td><%=apd.getEntryDate()%></td>
 				<td><%=apd.getEntryTime()%></td>
-				<td><a href="/car/preupdate?id=<%=apd.getId()%>">Edit</a></td>
+				<td><a href="/assignmentParking/preupdate?id=<%=apd.getId()%>">Edit</a></td>
 
 
-				<td><a href="/car/delete?id=<%=apd.getId()%>">Delete</a></td>
+				<td><a href="/assignmentParking/delete?id=<%=apd.getId()%>">Delete</a></td>
 
 			</tr>
 			<%
@@ -55,31 +64,51 @@
 			%>
 		</table>
 
-
-
-		<form id="floatright" action="/assignmentParking/insert" method="post">
+<form id="floatright" action="/assignmentParking/insert" method="post">
 			<div class="row">
 				<div class="col-25">
-					<label for="car">Model</label>
+					<label for="car">Car</label>
 				</div>
 				<div class="col-75">
-					<input type="text" id="car" name="model"
-						placeholder="inserisci auto">
+					<input type="text" id="car" name="license"
+						placeholder="inserisci car">
 				</div>
-			</div>
+				<div class="col-25">
+					<label for="id">Parkingplace</label>
+				</div>
+				<div class="col-75">
+					<input type="text" id="id" name="numberplace"
+						placeholder="inserisci numberplace">
+				</div>
+				
+				</div>
+                       <button type="submit">Insert</button>
+</form>
+
+		
+		
+		
+		
+		<%-- <form id="floatright" action="/assignmentParking/insert" method="post">
 			<div class="row">
 				<div class="col-25">
-					<label for="lic">License</label>
+					<label for="car">License</label>
 				</div>
 				<div class="col-75">
-					<input type="text" id="lic" name="license"
-						placeholder="inserisci targa">
-				</div>
-			</div>
+					<select id="car" name="License">
+         				<%
+         					for(CarDTO car: carList){
+         						
+         				%>
+         					<option>value="<%=car.getLicense()%>"> <%=car.getLicense()%></option>
+         				<%
+         				    }
+         				%>
+                   </select> 
 			
 			<button type="submit">Insert</button>
 			
-		</form>
+		</form> --%>
 
 	</div>
 	<br>

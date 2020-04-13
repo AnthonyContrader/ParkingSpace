@@ -9,7 +9,10 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import it.contrader.converter.FloorConverter;
 import it.contrader.dto.ParkingplaceDTO;
+import it.contrader.model.Floor;
+import it.contrader.service.FloorService;
 import it.contrader.service.ParkingplaceService;
 
 @Controller
@@ -19,6 +22,10 @@ public class ParkingplaceController {
 	
 	@Autowired
 	private ParkingplaceService service;
+	@Autowired
+	private FloorConverter floorConverter;
+	@Autowired
+	private FloorService floorService;
 	
 	@GetMapping("/getall")
 	public String getAll(HttpServletRequest request) {
@@ -35,7 +42,9 @@ public class ParkingplaceController {
 	
 	@GetMapping("/preupdate")
 	public String preUpdate(HttpServletRequest request, @RequestParam("id") Long id) {
-		request.getSession().setAttribute("dto", service.read(id));
+		ParkingplaceDTO dto = service.read(id);
+		request.getSession().setAttribute("dto",dto);
+		request.getSession().setAttribute("floor", dto.getFloor());
 		return "updateparkingplace";
 	}
 
@@ -45,15 +54,19 @@ public class ParkingplaceController {
 		ParkingplaceDTO dto = new ParkingplaceDTO();
 		dto.setId(id);
 		dto.setNumberplace(numberplace);
+		dto.setFloor((Floor)request.getSession().getAttribute("floor"));
 		service.update(dto);
 		setAll(request);
 		return "parkingplaces";
 	}
 	
 	@PostMapping("/insert")
-	public String insert(HttpServletRequest request, @RequestParam("numberplace") int numberplace) {
+	public String insert(HttpServletRequest request, @RequestParam("numberplace") int numberplace,@RequestParam("floor") int floor) {
 		ParkingplaceDTO dto = new ParkingplaceDTO();
+		
 		dto.setNumberplace(numberplace);
+		dto.setFloor(floorConverter.toEntity(floorService.findByNumberfloor(floor)));
+		
 		service.insert(dto);
 		setAll(request);
 		return "parkingplaces";
@@ -69,3 +82,4 @@ public class ParkingplaceController {
 		request.getSession().setAttribute("list",service.getAll());
 	}
 }
+

@@ -19,35 +19,37 @@
 <%@ include file="./css/header.jsp" %>
 <div class="navbar">
   <a href="/homeadmin.jsp">Home</a>
-  <a class="active" href="/car/getall">Cars</a>
-  <a href="/car/logout" id="logout">Logout</a>
+  <a class="active" href="/assignmentParking/getall">Assignment</a>
+  <a href="/user/logout" id="logout">Logout</a>
 </div>
 <br>
 <div class="main">
 
-<%AssignmentParkingDTO apd = (AssignmentParkingDTO) request.getSession().getAttribute("dto");%>
+		<%AssignmentParkingDTO apd = (AssignmentParkingDTO) request.getSession().getAttribute("dto");
+			
+			System.out.println("Sono qui in updateassignments"+apd.toString());
+		%>
 
 
-<form id="floatleft" action="/assignments/update" method="post">
+<form id="floatleft" action="/assignmentParking/update" method="post">
   <div class="row">
     <div class="col-25">
       <label for="car">Car</label>
     </div>
     <div class="col-75">
-      <input type="text" id="car" name="model" value=<%=apd.getCar()%>>
+      <input type="text" id="car" name="license" value=<%=apd.getCar().getLicense()%>>
     </div>
     <div class="col-25">
-      <label for="parkingplace">PostoAuto</label>
+      <label for="pp">PostoAuto</label>
     </div>
     <div class="col-75">
-      <input type="text" id="parkingplace" name="model" value=<%=apd.getPark()%>>
+      <input type="text" id="pp" name="numberplace" value=<%=apd.getPark().getNumberplace()%>>
     </div>
   </div>
   <div class="row">
-   
-    	<input type="hidden" name="id" value =<%=apd.getId() %>>
+    	<input type="hidden" name="id" value=<%=apd.getId() %>>
   </div>
-      <button type="submit" >Edit</button>
+      <button type="submit">Edit</button>
 </form>
 
 	

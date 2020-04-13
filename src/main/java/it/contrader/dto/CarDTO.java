@@ -1,5 +1,6 @@
 package it.contrader.dto;
 
+import it.contrader.model.AssignmentParking;
 import it.contrader.model.Person;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -17,5 +18,6 @@ public class CarDTO {
 	
 	private Person person;
 	
-
+	private AssignmentParking assignment;
+    
 }

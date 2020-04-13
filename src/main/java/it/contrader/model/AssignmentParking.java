@@ -1,11 +1,11 @@
 package it.contrader.model;
 
-
 import java.util.Date;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -17,12 +17,17 @@ import javax.persistence.TemporalType;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.EqualsAndHashCode;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 @AllArgsConstructor
 @NoArgsConstructor
-@Data
+@Getter
+@Setter
 @Entity
+
 @Table(name="Assignment")
 public class AssignmentParking {
 	
@@ -30,11 +35,10 @@ public class AssignmentParking {
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	@Column(name = "id")
 	private Long id;
-	
 	@JoinColumn(name="car_license", referencedColumnName="license")
-	@OneToOne(cascade = CascadeType.ALL)
+	@OneToOne
 	private Car car;
-	@OneToOne(cascade = CascadeType.ALL)
+	@OneToOne
 	@JoinColumn(name="id_parkingplace", referencedColumnName="id")
 	private Parkingplace parkingplace;
 	

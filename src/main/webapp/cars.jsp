@@ -18,18 +18,20 @@
 	<div class="navbar">
 		<a href="/homeadmin.jsp">Home</a> <a class="active"
 			href="/car/getall">Cars</a> <a href="/car/logout" id="logout">Logout</a>
+			
 	</div>
 	<div class="main">
 		<%
 		List<CarDTO> list = (List<CarDTO>) request.getSession().getAttribute("list");
+		//List<CarDTO> carList=(List<CarDTO>)request.getSession().getAttribute("dto");
 		%>
 
 		<br>
 
 		<table>
 			<tr>
-			    <th>Model</th>
-				<th>License</th>
+			    <th>License</th>
+				<th>Model</th>
 				<th></th>
 				<th></th>
 			</tr>
@@ -38,9 +40,9 @@
 				
 			%>
 			<tr>
-				<td><a href="/car/read?id=<%=c.getModel()%>"> <%=c.getModel()%>
+				<td><a href="/car/read?id=<%=c.getLicense()%>"> <%=c.getLicense()%>
 				</a></td>
-				<td><%=c.getLicense()%></td>
+				<td><%=c.getModel()%></td>
 			
 				<td><a href="/car/preupdate?id=<%=c.getLicense()%>">Edit</a></td>
 
@@ -53,6 +55,7 @@
 			%>
 		</table>
 
+       
 
 		<form id="floatright" action="/car/insert" method="post">
 			<div class="row">
@@ -68,45 +71,72 @@
 				<div class="col-25">
 					<label for="lic">License</label>
 				</div>
-				<div class="col-25">
+				<div class="col-75">
 					<input type="text" id="lic" name="license"
 						placeholder="inserisci targa">
 				</div>
 			</div>
 			<div class="row">
 				<div class="col-25">
-					<label for="prop">Person</label>
+					<label for="lic">Person</label>
 				</div>
-				<div class="col-25">
-					<input type="text" id="prop" name="proprietario"
-						placeholder="inserisci proprietario">
-			</div>
+				<div class="col-75">
+					<input type="text" id="lic" name="nome"
+						placeholder="inserisci nome">
+				</div>
+				<div class="col-75">
+					<input type="text" id="lic" name="cognome"
+						placeholder="inserisci cognome">
+				</div>
 			</div>
 			
-			<button type="submit">Insert</button>
+			<button type="submit">Insert</button>	
 		</form>
 		
-		<br> <br> <br> <br><br> 
-		<br><br> <br><br> <br>
-		<br> <br> <br> <br><br> 
-		<br><br> <br><br> <br>
-		<br><br> <br><br> <br>
 		
-		<form id="floatright" action="/car/read" >
+		
+		<br><br> <br><br> <br>
+		<br><br> <br><br> <br>
+		<br><br> <br><br> <br>
+		<br><br> <br><br> <br>
+		<br><br> <br><br> <br>
+<form id="floatright" action="/car/read" >
 			
 			<div class="row">
 				<div class="col-25">
 					<label for="lic">License</label>
 				</div>
-				<div class="col-25">
-					<input type="text" id="lic" name="license"
+				<div class="col-75">
+					<input type="text" id="lic" name="id"
 						placeholder="inserisci targa">
 				</div>
 			</div>
 			
 			<button type="submit">Check</button>
 		
-		</form>
+</form>
+		
+		<br><br> <br><br> <br>
+		<br><br> <br><br> <br>
+		<br><br> <br><br> <br>
+		
+<form id="floatright" action="/car/readByModel" >
+			
+			<div class="row">
+				<div class="col-25">
+					<label for="mod">Model</label>
+				</div>
+				<div class="col-75">
+					<input type="text" id="mod" name="id"
+						placeholder="inserisci modello">
+				</div>
+			</div>
+			
+			<button type="submit">Lista Auto</button>
+		
+		
+
+</form>
 
 	</div>
 	<br>
