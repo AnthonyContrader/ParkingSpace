@@ -13,7 +13,7 @@ import it.contrader.model.Car;
 @Transactional
 
 public interface CarRepository extends JpaRepository <Car, String>{
-	
+	 
 	 //Car findByLicenseAndModel (String license, String model);
      Car findByLicense(String license);
      List<Car> findCarsByModel(String model);

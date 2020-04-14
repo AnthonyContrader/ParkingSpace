@@ -19,6 +19,7 @@ public class CarService //extends AbstractService<Car, CarDTO>
 	@Autowired
 	private CarRepository repository;
 	
+	
 	/*
 	 * public CarDTO findByModelAndLicense (String model, String license) { return
 	 * converter.toDTO(repository.findByLicense(license));
@@ -33,6 +34,7 @@ public class CarService //extends AbstractService<Car, CarDTO>
 		return converter.toDTOList(repository.findCarsByModel(model));
 	}
 	public List<CarDTO> getAll(){
+		System.out.println("Il numero di entita Car = "+ repository.count());
 		return converter.toDTOList((repository.findAll()));
 	}
 	

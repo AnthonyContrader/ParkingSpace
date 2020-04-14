@@ -108,6 +108,7 @@ public class CarController {
 		 * System.out.println("Ci sono maseratii:  "+lists.size());
 		 * request.getSession().setAttribute("dto", service.findCars("Maserati"));
 		 */
+		//System.out.println("Il numero di entita Car = "+service.);
 		request.getSession().setAttribute("list", service.getAll());
 	}
 
