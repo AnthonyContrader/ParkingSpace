@@ -1,0 +1,39 @@
+<div class="container">
+    <div class="row mt-5">
+      <div class="col-md-1">
+        
+      </div>
+      <div class="col-md-10">
+        <table>
+          <tr>
+            <th>Nome</th>
+            <th>Cognome</th>
+            <th>Edit</th>
+            <th>Person</th>
+          </tr>
+          <tr>
+            <td>
+              <input placeholder="nome" [(ngModel)]="persontoinsert.firstName">
+            </td>
+            <td>
+              <input placeholder="cognome" [(ngModel)]="persontoinsert.secondName">
+            </td>
+            <td>
+              <button (click)="insert(persontoinsert)">Insert</button>
+            </td>
+            <td>
+              <button (click)="clear()">Clear</button>
+            </td>
+          </tr>
+          <tr *ngFor="let person of persons">
+            <td><input [(ngModel)]="person.firstName"></td>
+            <td><input [(ngModel)]="person.secondName"></td>
+            <td><button (click)=update(person)>Save</button></td>
+            <td><button (click)=delete(person)>Delete</button></td>
+          </tr>
+        </table>
+      </div>
+      <div class="col-md-1">
+      </div>
+    </div>
+</div>

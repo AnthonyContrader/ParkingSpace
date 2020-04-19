@@ -24,15 +24,15 @@ export class FloorComponent implements OnInit {
     }
 
     insert(floor : FloorDTO){
-        this.service.insert(floor).subscribe(()=> this.getFloor);
+        this.service.insert(floor).subscribe(()=> this.getFloor());
     }
 
     update(floor : FloorDTO){
-        this.service.update(floor).subscribe(()=> this.getFloor);
+        this.service.update(floor).subscribe(()=> this.getFloor());
     }
 
     delete(floor : FloorDTO){
-        this.service.delete(floor.id).subscribe(() => this.getFloor);
+        this.service.delete(floor.id).subscribe(() => this.getFloor());
     }
 
     clear(){
