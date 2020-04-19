@@ -11,6 +11,9 @@ export class AdminMenuComponent implements OnInit {
   isUserCollapsed = false;
   isClientCollapsed = false;
   isAccountCollapsed = false;
+  //
+  isPersonCollapsed=false;
+
 
   constructor(private router: Router) {
   }
@@ -33,5 +36,12 @@ export class AdminMenuComponent implements OnInit {
     if (this.isAccountCollapsed === false) {
       this.isAccountCollapsed = true;
     } else { this.isAccountCollapsed = false; }
+  }
+  personscollapse(){
+    if(this.isPersonCollapsed===false){
+      this.isPersonCollapsed=true;
+    }else{
+      this.isPersonCollapsed=false;
+    }
   }
 }
