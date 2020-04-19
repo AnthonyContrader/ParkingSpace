@@ -6,12 +6,17 @@ import { Router } from '@angular/router';
   templateUrl: './admin-menu.component.html',
   styleUrls: ['./admin-menu.component.css']
 })
+
 export class AdminMenuComponent implements OnInit {
 
   isParkingplaceCollapsed = false;
   isUserCollapsed = false;
   isClientCollapsed = false;
   isAccountCollapsed = false;
+  isFloorCollapsed = false;
+  isCarCollapsed = false;
+  isPersonCollapsed=false;
+
 
   constructor(private router: Router) {
   }
@@ -37,9 +42,31 @@ export class AdminMenuComponent implements OnInit {
 
     }
 
+  carscollapse() {
+    if (this.isCarCollapsed === false) {
+      this.isCarCollapsed = true;
+    } else { this.isCarCollapsed = false; }
+  }
+  
   accountcollapse() {
     if (this.isAccountCollapsed === false) {
       this.isAccountCollapsed = true;
     } else { this.isAccountCollapsed = false; }
+  }
+
+  floorcollapse(){
+    if(this.isFloorCollapsed === false){
+      this.isFloorCollapsed = true;
+    }
+    else {
+      this.isFloorCollapsed=false;
+    }
+  }
+  personscollapse(){
+    if(this.isPersonCollapsed===false){
+      this.isPersonCollapsed=true;
+    }else{
+      this.isPersonCollapsed=false;
+    }
   }
 }

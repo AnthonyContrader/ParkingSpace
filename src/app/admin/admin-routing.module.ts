@@ -4,7 +4,11 @@ import { AdminLayoutComponent } from '../layout/admin-layout/admin-layout.compon
 import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.component';
 import { UsersComponent } from './users/users.component';
 import {ParkingplacesComponent} from './parkingplaces/parkingplaces.component';
+import { CarsComponent } from './cars/cars.component';
 import { WorkInProgressComponent } from './work-in-progress/work-in-progress.component';
+import { FloorComponent } from './floor/floor.component';
+import { PersonsComponent } from '../persons/persons.component';
+
 
 
 /**
@@ -22,9 +26,13 @@ import { WorkInProgressComponent } from './work-in-progress/work-in-progress.com
 const routes: Routes = [
   { path: 'admin-dashboard', component: AdminLayoutComponent, children:[
     { path: '', component: AdminDashboardComponent},
+    { path: 'cars', component: CarsComponent},
     { path: 'users', component: UsersComponent},
     {path: 'parkingplaces', component: ParkingplacesComponent},
-    { path: 'work-in-progress', component: WorkInProgressComponent}
+    { path: 'work-in-progress', component: WorkInProgressComponent},
+    { path: 'work-in-progress', component: WorkInProgressComponent},
+    { path : 'floor' , component : FloorComponent},
+    {path: 'persons', component: PersonsComponent}
   ]}
 ];
 
