@@ -30,6 +30,17 @@
                         </i> Manage Users </a>
                 </button>
             </div>
+<<<<<<< HEAD
+            
+            <button type="button" class="menubtn" data-toggle="collapsebtn" data-target="#cars"
+                (click)="carscollapse()">
+                <i class="fas fa-cars" style="margin-right: 15px"></i>Cars
+            </button>
+            <div class="collapsebtn" id="cars" *ngIf="isCarsCollapsed">
+                <button class="menubtn" style="padding-left: 40px; background-color: #334247;">
+                    <a [routerLink]="['/admin-dashboard/cars']"> <i class="fas fa-edit" style="margin-right: 10px">
+                        </i> Manage Cars </a>
+=======
             <!--Inizio di Person-->
             <button type="button" class="menubtn" data-toggle="collapsebtn" data-target="#persons"
                 (click)="personscollapse()">
@@ -40,6 +51,7 @@
                 <button class="menubtn" style="padding-left: 40px; background-color: #334247;">
                     <a [routerLink]="['/admin-dashboard/persons']"> <i class="fas fa-edit" style="margin-right: 10px;">
                     </i>Manage Persons</a>
+>>>>>>> 89538b846dad6688b0418ea761406f103cd9c266
                 </button>
             </div>
             <button class="menubtn" (click)="logout()">

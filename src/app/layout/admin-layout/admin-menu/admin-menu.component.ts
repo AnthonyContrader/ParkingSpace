@@ -11,9 +11,13 @@ export class AdminMenuComponent implements OnInit {
   isUserCollapsed = false;
   isClientCollapsed = false;
   isAccountCollapsed = false;
+<<<<<<< HEAD
+  isCarCollapsed = false;
+=======
   //
   isPersonCollapsed=false;
 
+>>>>>>> 89538b846dad6688b0418ea761406f103cd9c266
 
   constructor(private router: Router) {
   }
@@ -32,6 +36,12 @@ export class AdminMenuComponent implements OnInit {
     } else { this.isUserCollapsed = false; }
   }
 
+  carscollapse() {
+    if (this.isCarCollapsed === false) {
+      this.isCarCollapsed = true;
+    } else { this.isCarCollapsed = false; }
+  }
+  
   accountcollapse() {
     if (this.isAccountCollapsed === false) {
       this.isAccountCollapsed = true;
