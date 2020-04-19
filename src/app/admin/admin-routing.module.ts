@@ -3,7 +3,9 @@ import { Routes, RouterModule } from '@angular/router';
 import { AdminLayoutComponent } from '../layout/admin-layout/admin-layout.component';
 import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.component';
 import { UsersComponent } from './users/users.component';
+import {ParkingplacesComponent} from './parkingplaces/parkingplaces.component';
 import { WorkInProgressComponent } from './work-in-progress/work-in-progress.component';
+
 
 /**
  * Modulo di routing dell'admin. Qui ci sono i percorsi che un admin può seguire:
@@ -21,6 +23,7 @@ const routes: Routes = [
   { path: 'admin-dashboard', component: AdminLayoutComponent, children:[
     { path: '', component: AdminDashboardComponent},
     { path: 'users', component: UsersComponent},
+    {path: 'parkingplaces', component: ParkingplacesComponent},
     { path: 'work-in-progress', component: WorkInProgressComponent}
   ]}
 ];

@@ -8,6 +8,7 @@ import { Router } from '@angular/router';
 })
 export class AdminMenuComponent implements OnInit {
 
+  isParkingplaceCollapsed = false;
   isUserCollapsed = false;
   isClientCollapsed = false;
   isAccountCollapsed = false;
@@ -28,6 +29,13 @@ export class AdminMenuComponent implements OnInit {
       this.isUserCollapsed = true;
     } else { this.isUserCollapsed = false; }
   }
+
+  parkingplacescollapse() {
+    if(this.isParkingplaceCollapsed == false) {
+      this.isParkingplaceCollapsed = true;
+    } else {this.isParkingplaceCollapsed = false; }
+
+    }
 
   accountcollapse() {
     if (this.isAccountCollapsed === false) {
