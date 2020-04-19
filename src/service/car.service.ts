@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { AbstractService } from './abstractservice';
 import { CarDTO } from 'src/dto/cardto';
 import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
 
 
 /**
@@ -20,5 +21,21 @@ export class CarService extends AbstractService<CarDTO>{
     super(http);
     this.type = 'car';
   }
+  deleteCar(license: string): Observable<any> {
+    return this.http.delete('http://localhost:' + this.port + '/' + this.type + '/delete?id=' + license);
+  }
+  readCar(license: string): Observable<CarDTO> {
+    return this.http.get<CarDTO>('http://localhost:' + this.port + '/' + this.type + '/read?id=' + license);
+  }
+  insertCar(dto:CarDTO): Observable<any> {
+    return this.http.post('http://localhost:' + this.port + '/' + this.type + '/insert', dto);
+}
+
+  updateCar(dto: CarDTO): Observable<CarDTO> {
+    return this.http.put<CarDTO>('http://localhost:' + this.port + '/' + this.type + '/update', dto);
+
+  }
+
+
 
 }

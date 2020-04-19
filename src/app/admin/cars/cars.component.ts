@@ -23,15 +23,15 @@ export class CarsComponent implements OnInit {
   }
 
   delete(car: CarDTO) {
-    this.service.delete(car.id).subscribe(() => this.getCars());
+    this.service.deleteCar(car.model).subscribe(() => this.getCars());
   }
 
   update(car: CarDTO) {
-    this.service.update(car).subscribe(() => this.getCars());
+    this.service.updateCar(car).subscribe(() => this.getCars());
   }
 
   insert(car: CarDTO) {
-    this.service.insert(car).subscribe(() => this.getCars());
+    this.service.insertCar(car).subscribe(() => this.getCars());
   }
 
   clear(){

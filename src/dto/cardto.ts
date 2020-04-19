@@ -7,12 +7,8 @@
  * 
  */
 export class CarDTO {
-
-   id: number;
-
-   model: string;
-
    license: string;
+   model: string;
 
    
 
