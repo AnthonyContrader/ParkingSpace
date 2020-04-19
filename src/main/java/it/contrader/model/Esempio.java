@@ -6,5 +6,7 @@ public class Esempio {
     private String cognome;
     private int number;
     private int what;
+    private int Id;
+    private String indirizzo;
 
 }
