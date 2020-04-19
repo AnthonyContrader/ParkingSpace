@@ -31,7 +31,7 @@ public class CarConverter extends AbstractConverter<Car,CarDTO> {
 	public CarDTO toDTO(Car car) {
 		CarDTO carDTO = null;
 		if (car != null) {
-			carDTO = new CarDTO(car.getId(), car.getLicense(), car.getModel());
+			carDTO = new CarDTO(car.getLicense(), car.getModel());
 			
 		}
 		return carDTO;

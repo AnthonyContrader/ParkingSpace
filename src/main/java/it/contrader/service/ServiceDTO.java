@@ -1,5 +1,7 @@
 package it.contrader.service;
 
+import org.springframework.stereotype.Service;
+
 /**
  * Questa interfaccia firma i metodi dei Service. Osservare che, a differenza di
  * AbstactService, dipende solo dal parametro DTO.
@@ -10,6 +12,7 @@ package it.contrader.service;
  * 
  * @see AbstractService.
  */
+
 public interface ServiceDTO<DTO> {
 	
 	public Iterable<DTO> getAll();

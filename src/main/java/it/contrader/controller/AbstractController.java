@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import it.contrader.service.CarService;
 import it.contrader.service.ServiceDTO;
 
 /**
@@ -27,6 +28,9 @@ public abstract class AbstractController <DTO>{
 
 	@Autowired
 	private ServiceDTO<DTO> service;
+	
+	@Autowired
+	private CarService carService;
 	
 	@GetMapping("/getall")
 	public Iterable<DTO> getAll(){

@@ -1,7 +1,10 @@
 package it.contrader.dao;
 
+import java.util.List;
+
 import javax.transaction.Transactional;
 
+import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
@@ -12,8 +15,9 @@ import it.contrader.model.Car;
 @Transactional
 
 
-public interface CarRepository extends CrudRepository<Car, Long>{
+public interface CarRepository extends JpaRepository<Car, String>{
 
-	Car findByModelAndLicense(String model, String license);
+	Car findByLicense(String license);
+    List<Car> findCarsByModel(String model);
 	
 }

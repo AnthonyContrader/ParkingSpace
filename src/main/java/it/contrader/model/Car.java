@@ -20,15 +20,11 @@ import lombok.Setter;
 
 public class Car {
 	@Id
-	@Column(name="license")
+	
 	private String license;
 	
 	private String model;
 
-	public long getId() {
-		// TODO Auto-generated method stub
-		return 0;
-	}
 	
 	//@ManyToOne
 	//@JoinColumn(name="id_person", referencedColumnName = "id")
