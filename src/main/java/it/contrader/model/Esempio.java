@@ -4,5 +4,6 @@ public class Esempio {
 	
     private String nome;
     private String cognome;
+    private int Id;
 
 }
