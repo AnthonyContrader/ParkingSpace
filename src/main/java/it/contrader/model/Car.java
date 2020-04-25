@@ -20,9 +20,8 @@ import lombok.Setter;
 
 public class Car {
 	@Id
-	
 	private String license;
-	
+	@Column
 	private String model;
 
 	

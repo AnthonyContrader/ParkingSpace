@@ -14,8 +14,8 @@ import lombok.NoArgsConstructor;
 
 public class CarDTO {
 	
-	private String model;
-	
 	private String license;
+	
+	private String model;
 
 }
