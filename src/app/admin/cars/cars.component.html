@@ -22,10 +22,10 @@
         </tr>
         <tr>
           <td>
-            <input placeholder="license" [(ngModel)]="cartoinsert.model">
+            <input placeholder="license" [(ngModel)]="cartoinsert.license">
           </td>
           <td>
-            <input placeholder="model" [(ngModel)]="cartoinsert.license">
+            <input placeholder="model" [(ngModel)]="cartoinsert.model">
           </td>
           
           <td>
@@ -37,10 +37,10 @@
         </tr>
         <tr *ngFor="let car of cars">
           <td>
-            <input [(ngModel)]="car.model">
+            <input [(ngModel)]="car.license">
           </td>
           <td>
-            <input [(ngModel)]="car.license">
+            <input [(ngModel)]="car.model">
           </td>
           
           <td>
@@ -55,5 +55,37 @@
     <div class="col-md-1">
 
     </div>
+  </div>
+</div>
+
+<div>
+  <form>
+    <td>
+      <input placeholder="model" [(ngModel)]="carToCheck.model"
+          [ngModelOptions]="{standalone: true}">
+    </td>
+    <td>
+      <button (click)="getAllByModel(carToCheck.model)">SearchByModel</button>
+      <!-- <a [routerLink]="['/admin-dashboard/persons/personsSearchByLastname']"> 
+        Go 
+      </a> -->
+     <!--  <button onclick="window.location.href 
+        = '/admin-dashboard/persons/personsSearchByLastname';">Click Here
+      </button> -->
+        
+
+    </td>
+     <!-- <input #box (keyup.enter)="onEnter(box.value)"> -->
+     <!-- <p>{{value}}</p> -->
+    </form>
+  <div >
+    <tr *ngFor="let car of models">
+      <td>
+        <input [(ngModel)]="car.license"> 
+      </td>
+      <td>
+        <input [(ngModel)]="car.model"> 
+      </td>
+    </tr>
   </div>
 </div>

@@ -37,3 +37,35 @@
       </div>
     </div>
 </div>
+
+<div>
+  <form>
+    <td>
+      <input placeholder="cognome" [(ngModel)]="personcheck.lastName"
+          [ngModelOptions]="{standalone: true}">
+    </td>
+    <td>
+      <button (click)="getPersonsByLastName(personcheck.lastName)">SearchByLastName</button>
+      <!-- <a [routerLink]="['/admin-dashboard/persons/personsSearchByLastname']"> 
+        Go 
+      </a> -->
+     <!--  <button onclick="window.location.href 
+        = '/admin-dashboard/persons/personsSearchByLastname';">Click Here
+      </button> -->
+        
+
+    </td>
+     <!-- <input #box (keyup.enter)="onEnter(box.value)"> -->
+     <!-- <p>{{value}}</p> -->
+  </form>
+  <div>
+    <tr *ngFor="let person of personsSameLastName">
+      <td>
+        <input [(ngModel)]="person.firstName"> 
+      </td>
+      <td>
+        <input [(ngModel)]="person.secondName"> 
+      </td>
+    </tr>
+  </div>
+</div>

@@ -1,6 +1,9 @@
+
+
 import { Component, OnInit } from '@angular/core';
 import { CarService } from 'src/service/car.service';
 import { CarDTO } from 'src/dto/cardto';
+
 
 @Component({
   selector: 'app-cars',
@@ -10,7 +13,11 @@ import { CarDTO } from 'src/dto/cardto';
 export class CarsComponent implements OnInit {
 
   cars: CarDTO[];
+  cars1: CarDTO[];
   cartoinsert: CarDTO = new CarDTO();
+  models: CarDTO[]=[];
+  model: String;
+  carToCheck: CarDTO = new CarDTO();
 
   constructor(private service: CarService) { }
 
@@ -37,4 +44,17 @@ export class CarsComponent implements OnInit {
   clear(){
     this.cartoinsert = new CarDTO();
   }
+  
+  getAllByModel(model:String){
+    this.model=model;
+    for(let car of this.cars){
+       if(car.model===model){ 
+        this.models.push(car);
+
+       }
+    console.log(this.models.length.toString);
+    }
+    
+  } 
+  
 }

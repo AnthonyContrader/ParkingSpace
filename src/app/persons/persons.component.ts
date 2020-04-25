@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { PersonDTO } from 'src/dto/persondto';
 import { PersonService } from 'src/service/person.service';
+import { last } from '@angular/router/src/utils/collection';
 
 @Component({
   selector: 'app-persons',
@@ -10,6 +11,9 @@ import { PersonService } from 'src/service/person.service';
 export class PersonsComponent implements OnInit {
   persons: PersonDTO[];
   persontoinsert: PersonDTO = new PersonDTO();
+  personsSameLastName: PersonDTO[]=[];
+  lastName= '';
+  personcheck: PersonDTO = new PersonDTO();
   constructor(private service: PersonService) { }
 
   ngOnInit() {
@@ -31,6 +35,19 @@ export class PersonsComponent implements OnInit {
   }
   clear(){
     this.persontoinsert=new PersonDTO();
+  }
+
+  getPersonsByLastName(lastName){
+    //il parametro non viene letto.
+    this.lastName=lastName;
+    //this.personsSameLastName=[];
+    console.log('this is inserted lastname:' + lastName);
+    for(let person of this.persons){
+      if(person.secondName===lastName){
+        this.personsSameLastName.push(person);
+      }
+    }
+    console.log(this.personsSameLastName.length);
   }
 
 }
