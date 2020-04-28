@@ -15,16 +15,20 @@
           </tr>
           <tr>
             <td>
-              <input placeholder="license Car" [(ngModel)]="assignmentToInsert.car">
+              <input placeholder="license Car" [(ngModel)]="assignmentToInsert.car.license">
             </td>
             <td>
-              <input placeholder="id PostoAuto" [(ngModel)]="assignmentToInsert.park">
+              <input placeholder="id PostoAuto" [(ngModel)]="assignmentToInsert.park.id">
+            </td>
+            <td>
+            </td>
+            <td>         
             </td>
             <!-- <td>
-              <input placeholder="data entry" [(ngModel)]=""> data 
+              <input placeholder="data entry" [(ngModel)]="assignmentToInsert.entryDate">
             </td>
             <td>
-              <input placeholder="time entry" [(ngModel)]=""> ora
+              <input placeholder="time entry" [(ngModel)]="assignmentToInsert.entryTime">
             </td> -->
             <td>
               <button (click)="insert(assignmentToInsert)">Insert</button>
@@ -42,6 +46,12 @@
             </td>
             <td>
                 <input [(ngModel)]="asg.park.numberplace">
+            </td>
+            <td>
+              <input [(ngModel)]="asg.entryDate">
+            </td>
+            <td>
+              <input [(ngModel)]="asg.entryTime">
             </td>
             <td>
               <button (click)=update(asg)>Save</button>

@@ -8,8 +8,8 @@ import { Time } from '@angular/common';
  */
 export class AssignmentParkingDTO{
     id: number;
-    car: CarDTO;
-    park: ParkingplaceDTO;
+    car: CarDTO = new CarDTO();
+    park: ParkingplaceDTO = new ParkingplaceDTO();
     entryDate: Date;
     entryTime: Time;
 }
