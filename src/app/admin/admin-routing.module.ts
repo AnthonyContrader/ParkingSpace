@@ -1,17 +1,14 @@
-import { SearchByModelComponent } from './../search-by-model/search-by-model.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { AdminLayoutComponent } from '../layout/admin-layout/admin-layout.component';
 import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.component';
 import { UsersComponent } from './users/users.component';
-import {ParkingplacesComponent} from './parkingplaces/parkingplaces.component';
+import { ParkingplacesComponent} from './parkingplaces/parkingplaces.component';
 import { CarsComponent } from './cars/cars.component';
 import { WorkInProgressComponent } from './work-in-progress/work-in-progress.component';
 import { FloorComponent } from './floor/floor.component';
 import { PersonsComponent } from '../persons/persons.component';
 import { AssignmentParkingComponent } from './assignment-parking/assignment-parking.component';
-import { CarsbymodelComponent } from './cars/carsbymodel/carsbymodel.component';
-
 
 
 /**
@@ -37,7 +34,6 @@ const routes: Routes = [
             { path: 'work-in-progress', component: WorkInProgressComponent},
             { path : 'floor' , component : FloorComponent},
             { path: 'persons', component: PersonsComponent},
-            { path: 'search-by-model',component: CarsbymodelComponent},
             { path: 'assignments',component: AssignmentParkingComponent}
            ]}
 ];

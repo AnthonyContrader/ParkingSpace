@@ -7,7 +7,6 @@ import { LoginModule } from './login/login.module';
 import { HttpClientModule } from '@angular/common/http';
 import { LayoutModule } from './layout/layout.module';
 import { AdminModule } from './admin/admin.module';
-import { SearchByModelComponent } from './search-by-model/search-by-model.component';
 
 
 
