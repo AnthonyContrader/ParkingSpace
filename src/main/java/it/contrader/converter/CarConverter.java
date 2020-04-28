@@ -22,7 +22,7 @@ public class CarConverter extends AbstractConverter<Car,CarDTO> {
 	public Car toEntity(CarDTO carDTO) {
 		Car car = null;
 		if (carDTO != null) {
-			car = new Car(carDTO.getLicense(),carDTO.getModel());			
+			car = new Car(carDTO.getLicense(),carDTO.getModel(),carDTO.getPerson());			
 		}
 		return car;
 	}
@@ -31,7 +31,7 @@ public class CarConverter extends AbstractConverter<Car,CarDTO> {
 	public CarDTO toDTO(Car car) {
 		CarDTO carDTO = null;
 		if (car != null) {
-			carDTO = new CarDTO(car.getLicense(), car.getModel());
+			carDTO = new CarDTO(car.getLicense(), car.getModel(), car.getPerson());
 			
 		}
 		return carDTO;

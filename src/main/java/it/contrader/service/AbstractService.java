@@ -1,5 +1,8 @@
 package it.contrader.service;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 
 import org.springframework.data.repository.CrudRepository;
@@ -30,12 +33,18 @@ public abstract class AbstractService<Entity,DTO> implements ServiceDTO<DTO> {
 	
 	@Override
 	public DTO insert(DTO dto) {
+		System.out.println("Sono nel insert di AbstractService: "+ dto.toString());
 		return converter.toDTO(repository.save(converter.toEntity(dto)));
 	}
 
 	@Override
 	public Iterable<DTO> getAll() {
-		return converter.toDTOList(repository.findAll());
+		List<DTO> list = new ArrayList<DTO>();
+		list = converter.toDTOList(repository.findAll());
+		for(int i = 0; i <list.size();i++) {
+			System.out.println("sono nel getAll di AbstractService: "+list.get(i).toString());
+		}
+		return list;
 	}
 
 	@Override

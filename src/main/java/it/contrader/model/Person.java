@@ -2,12 +2,18 @@ package it.contrader.model;
 
 
 
+import java.util.HashSet;
+import java.util.Iterator;
+import java.util.Set;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 
+import lombok.AccessLevel;
 import lombok.AllArgsConstructor;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
@@ -31,7 +37,7 @@ public class Person {
 	@Column
 	private String secondName;
 	
-	/*@OneToMany(mappedBy="person")
+	@OneToMany(mappedBy="person")
 	@Getter(value=AccessLevel.NONE)
 	//@Setter(value=AccessLevel.NONE)
 	private Set<Car> cars; 
@@ -43,6 +49,6 @@ public class Person {
 			cars.add(car);
 		}
 		return cars;
-	}*/
+	}
 	
 }

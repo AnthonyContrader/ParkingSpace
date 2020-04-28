@@ -14,7 +14,9 @@ import it.contrader.service.ParkingplaceService;
 
 
 public class ParkingplaceController extends AbstractController<ParkingplaceDTO> {
-
+	
 	@Autowired
 	private ParkingplaceService parkingplaceservice;
+	
+	
 }

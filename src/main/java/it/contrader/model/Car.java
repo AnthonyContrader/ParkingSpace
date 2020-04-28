@@ -1,11 +1,15 @@
 package it.contrader.model;
+import javax.persistence.CascadeType;
 //import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
 //import javax.persistence.JoinColumn;
 //import javax.persistence.ManyToOne;
 //import javax.persistence.OneToOne;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToOne;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -17,7 +21,6 @@ import lombok.Setter;
 @Getter
 @Setter 
 @Entity
-
 public class Car {
 	@Id
 	private String license;
@@ -25,11 +28,13 @@ public class Car {
 	private String model;
 
 	
-	//@ManyToOne
-	//@JoinColumn(name="id_person", referencedColumnName = "id")
-	//@EqualsAndHashCode(exclude = {"id_person"})
-	//private Person person;
+	@ManyToOne
+	@JoinColumn(name="id_person", referencedColumnName = "id")
+	//s@EqualsAndHashCode(exclude = {"id_person"})
+	private Person person;
 	
-	//@OneToOne(mappedBy="car",cascade=CascadeType.REMOVE)
-	//private AssignmentParking assignment;
+	/*
+	 * @OneToOne(mappedBy="car",cascade=CascadeType.REMOVE) private
+	 * AssignmentParking assignment;
+	 */
 }

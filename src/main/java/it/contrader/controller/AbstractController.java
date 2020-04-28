@@ -50,12 +50,14 @@ public abstract class AbstractController <DTO>{
 	
 	@PostMapping("/insert")
 	public DTO insert (@RequestBody DTO dto) {
+		System.out.println("send it to me: " +dto.toString());
 		service.insert(dto);
 		return dto;
 	}
 	
 	@GetMapping("/read")
 	public DTO read(long id) {
+		System.out.println("Sono nel read di AbstractContrell, speriamo: "+ id);
 		return service.read(id);
 	}
 }

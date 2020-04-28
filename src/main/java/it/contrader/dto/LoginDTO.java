@@ -1,4 +1,4 @@
-package it.contrader.dto;
+ package it.contrader.dto;
 
 
 import lombok.AllArgsConstructor;
