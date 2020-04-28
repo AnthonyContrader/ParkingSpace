@@ -10,6 +10,7 @@ import { WorkInProgressComponent } from './work-in-progress/work-in-progress.com
 import { FloorComponent } from './floor/floor.component';
 import { PersonsComponent } from '../persons/persons.component';
 import { AssignmentParkingComponent } from './assignment-parking/assignment-parking.component';
+import { CarsbymodelComponent } from './cars/carsbymodel/carsbymodel.component';
 
 
 
@@ -36,7 +37,7 @@ const routes: Routes = [
             { path: 'work-in-progress', component: WorkInProgressComponent},
             { path : 'floor' , component : FloorComponent},
             { path: 'persons', component: PersonsComponent},
-            { path: 'search-by-model',component: SearchByModelComponent},
+            { path: 'search-by-model',component: CarsbymodelComponent},
             { path: 'assignments',component: AssignmentParkingComponent}
            ]}
 ];

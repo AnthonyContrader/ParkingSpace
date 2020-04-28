@@ -23,7 +23,7 @@ import { CarsbymodelComponent } from './cars/carsbymodel/carsbymodel.component';
  */
 @NgModule({
   
-  declarations: [AdminDashboardComponent, UsersComponent , FloorComponent, CarsComponent,PersonsComponent,SearchByModelComponent, WorkInProgressComponent,ParkingplacesComponent, AssignmentParkingComponent, CarsbymodelComponent],
+  declarations: [AdminDashboardComponent, UsersComponent , FloorComponent, CarsComponent,PersonsComponent, WorkInProgressComponent,ParkingplacesComponent, AssignmentParkingComponent, CarsbymodelComponent],
   
   imports: [
     CommonModule,
