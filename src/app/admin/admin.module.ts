@@ -11,6 +11,7 @@ import { FloorComponent } from './floor/floor.component';
 import { CarsComponent } from "./cars/cars.component";
 import { PersonsComponent } from '../persons/persons.component';
 import { AssignmentParkingComponent } from './assignment-parking/assignment-parking.component';
+import { CarsbymodelComponent } from './cars/carsbymodel/carsbymodel.component';
 
 /**
  * Modulo dell'admin, qui vengono dichiarate le component che utilizza 
@@ -22,7 +23,7 @@ import { AssignmentParkingComponent } from './assignment-parking/assignment-park
  */
 @NgModule({
   
-  declarations: [AdminDashboardComponent, UsersComponent , FloorComponent, CarsComponent,PersonsComponent,SearchByModelComponent, WorkInProgressComponent,ParkingplacesComponent, AssignmentParkingComponent],
+  declarations: [AdminDashboardComponent, UsersComponent , FloorComponent, CarsComponent,PersonsComponent,SearchByModelComponent, WorkInProgressComponent,ParkingplacesComponent, AssignmentParkingComponent, CarsbymodelComponent],
   
   imports: [
     CommonModule,
