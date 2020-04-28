@@ -1,13 +1,15 @@
 <div class="container">
   <div class="row mt-5">
     <div class="col-md-1">
-
     </div>
 <div class="col-md-10">
   <table>
     <tr>
       <th>
         Numberplace
+      </th>
+      <th>
+        Floor
       </th>
       <th>
         Edit
@@ -21,9 +23,12 @@
         <input placeholder="numberplace"[(ngModel)]="parkingplacetoinsert.numberplace">
       </td>
       <td>
+        <input placeholder="floor"[(ngModel)]="parkingplacetoinsert.floor">
+      </td>
+      <!-- {{parkingplacetoinsert | json}} -->
+      <td>
         <button (click)="insert(parkingplacetoinsert)">Insert</button>
       </td>
-
       <td>
         <button (click) = "clear()">Clear</button>
       </td>
@@ -32,6 +37,10 @@
       <td>
         <input [(ngModel)]="parkingplace.numberplace">
       </td>
+      <td>
+        <input [(ngModel)]="parkingplace.floor.numberfloor">
+      </td>
+
       <td>
         <button (click) = "update(parkingplace)">Update</button>
       </td>
@@ -42,7 +51,6 @@
   </table>
 </div>
       <div class ="col-md-1">
-
       </div>
   </div>
 </div>

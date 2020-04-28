@@ -1,3 +1,4 @@
+import { SearchByModelComponent } from './../search-by-model/search-by-model.component';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
@@ -9,6 +10,7 @@ import { ParkingplacesComponent } from './parkingplaces/parkingplaces.component'
 import { FloorComponent } from './floor/floor.component';
 import { CarsComponent } from "./cars/cars.component";
 import { PersonsComponent } from '../persons/persons.component';
+import { AssignmentParkingComponent } from './assignment-parking/assignment-parking.component';
 
 /**
  * Modulo dell'admin, qui vengono dichiarate le component che utilizza 
@@ -20,7 +22,7 @@ import { PersonsComponent } from '../persons/persons.component';
  */
 @NgModule({
   
-  declarations: [AdminDashboardComponent, UsersComponent , FloorComponent, CarsComponent,PersonsComponent, WorkInProgressComponent,ParkingplacesComponent],
+  declarations: [AdminDashboardComponent, UsersComponent , FloorComponent, CarsComponent,PersonsComponent,SearchByModelComponent, WorkInProgressComponent,ParkingplacesComponent, AssignmentParkingComponent],
   
   imports: [
     CommonModule,

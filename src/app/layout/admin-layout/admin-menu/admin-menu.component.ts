@@ -16,7 +16,7 @@ export class AdminMenuComponent implements OnInit {
   isFloorCollapsed = false;
   isCarCollapsed = false;
   isPersonCollapsed=false;
-
+  isAssignmentCollapsed=false;
 
   constructor(private router: Router) {
   }
@@ -45,7 +45,8 @@ export class AdminMenuComponent implements OnInit {
   carscollapse() {
     if (this.isCarCollapsed === false) {
       this.isCarCollapsed = true;
-    } else { this.isCarCollapsed = false; }
+    } else { this.isCarCollapsed = false; 
+    }
   }
   
   accountcollapse() {
@@ -67,6 +68,13 @@ export class AdminMenuComponent implements OnInit {
       this.isPersonCollapsed=true;
     }else{
       this.isPersonCollapsed=false;
+    }
+  }
+  assignmentscollapse(){
+    if(this.isAssignmentCollapsed===false){
+       this.isAssignmentCollapsed=true;
+    }else{
+      this.isAssignmentCollapsed=false;
     }
   }
 }

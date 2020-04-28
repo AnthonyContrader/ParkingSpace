@@ -1,0 +1,58 @@
+<div class="container">
+    <div class="row mt-5">
+      <div class="col-md-1">
+  
+      </div>
+      <div class="col-md-10">
+        <table>
+          <tr>
+            <th>Car</th>
+            <th>PostoAuto</th>
+            <th>EntryDate</th>
+            <th>EntryTime</th>
+            <th>Edit</th>
+            <th>Assignments</th>
+          </tr>
+          <tr>
+            <td>
+              <input placeholder="license Car" [(ngModel)]="assignmentToInsert.car">
+            </td>
+            <td>
+              <input placeholder="id PostoAuto" [(ngModel)]="assignmentToInsert.park">
+            </td>
+            <!-- <td>
+              <input placeholder="data entry" [(ngModel)]=""> data 
+            </td>
+            <td>
+              <input placeholder="time entry" [(ngModel)]=""> ora
+            </td> -->
+            <td>
+              <button (click)="insert(assignmentToInsert)">Insert</button>
+            </td>
+            <td>
+              <button (click)="clear()">Clear</button>
+            </td>
+          </tr>
+          <tr *ngFor="let asg of assignments">
+            <!-- <td>
+              <input [(ngModel)]="asg.id">
+            </td> -->
+            <td>
+              <input [(ngModel)]="asg.car.license">
+            </td>
+            <td>
+                <input [(ngModel)]="asg.park.numberplace">
+            </td>
+            <td>
+              <button (click)=update(asg)>Save</button>
+            </td>
+            <td>
+              <button (click)="delete(asg)">Delete</button>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="col-md-1">
+      </div>
+    </div>
+  </div>

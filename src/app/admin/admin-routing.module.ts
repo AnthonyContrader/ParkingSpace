@@ -1,3 +1,4 @@
+import { SearchByModelComponent } from './../search-by-model/search-by-model.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { AdminLayoutComponent } from '../layout/admin-layout/admin-layout.component';
@@ -8,6 +9,7 @@ import { CarsComponent } from './cars/cars.component';
 import { WorkInProgressComponent } from './work-in-progress/work-in-progress.component';
 import { FloorComponent } from './floor/floor.component';
 import { PersonsComponent } from '../persons/persons.component';
+import { AssignmentParkingComponent } from './assignment-parking/assignment-parking.component';
 
 
 
@@ -24,20 +26,24 @@ import { PersonsComponent } from '../persons/persons.component';
  * @see layout
  */
 const routes: Routes = [
-  { path: 'admin-dashboard', component: AdminLayoutComponent, children:[
-    { path: '', component: AdminDashboardComponent},
-    { path: 'cars', component: CarsComponent},
-    { path: 'users', component: UsersComponent},
-    {path: 'parkingplaces', component: ParkingplacesComponent},
-    { path: 'work-in-progress', component: WorkInProgressComponent},
-    { path: 'work-in-progress', component: WorkInProgressComponent},
-    { path : 'floor' , component : FloorComponent},
-    {path: 'persons', component: PersonsComponent}
-  ]}
+  { path: 'admin-dashboard', component: AdminLayoutComponent, 
+  children:[
+            { path: '', component: AdminDashboardComponent},
+            { path: 'cars', component: CarsComponent},
+            { path: 'users', component: UsersComponent},
+            { path: 'parkingplaces', component: ParkingplacesComponent},
+            { path: 'work-in-progress', component: WorkInProgressComponent},
+            { path: 'work-in-progress', component: WorkInProgressComponent},
+            { path : 'floor' , component : FloorComponent},
+            { path: 'persons', component: PersonsComponent},
+            { path: 'search-by-model',component: SearchByModelComponent},
+            { path: 'assignments',component: AssignmentParkingComponent}
+           ]}
 ];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
-export class AdminRoutingModule { }
+export class AdminRoutingModule { 
+}

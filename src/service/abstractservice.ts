@@ -32,6 +32,7 @@ export abstract class AbstractService<DTO> implements Service<DTO> {
     }
 
     insert(dto: DTO): Observable<any> {
+        console.log(dto);
         return this.http.post('http://localhost:' + this.port + '/' + this.type + '/insert', dto);
     }
 

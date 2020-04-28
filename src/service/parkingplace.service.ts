@@ -9,7 +9,7 @@ import { AbstractService } from './abstractservice';
 export class ParkingplaceService extends AbstractService<ParkingplaceDTO> {
 
   constructor(http: HttpClient) { 
-    super(http)
+    super(http);
     this.type= 'parkingplace';
   }
 }

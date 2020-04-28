@@ -1,0 +1,26 @@
+<div class="col-md-10">
+  <table>
+    <tr>
+      <th>
+        License
+      </th>
+      <th>
+        Model
+      </th>
+    </tr>
+  <tr *ngFor="let car of models">
+     <!-- <td>
+       {{car.license}}
+     </td>
+     <td>
+       {{car.model}}
+     </td> -->
+    <td>
+      <input [(ngModel)]="car.license"> 
+    </td> 
+   <td>
+      <input [(ngModel)]="car.model"> 
+    </td>
+  </tr>
+  </table>
+</div>

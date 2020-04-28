@@ -1,8 +1,9 @@
 
 
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, Output } from '@angular/core';
 import { CarService } from 'src/service/car.service';
 import { CarDTO } from 'src/dto/cardto';
+import { EventEmitter } from 'protractor';
 
 
 @Component({
@@ -44,15 +45,17 @@ export class CarsComponent implements OnInit {
   clear(){
     this.cartoinsert = new CarDTO();
   }
-  
+  //@Output() object = new EventEmitter(); problemi di ??loader??
   getAllByModel(model:String){
     this.model=model;
+    console.log(this.model);
     for(let car of this.cars){
        if(car.model===model){ 
         this.models.push(car);
 
        }
     console.log(this.models.length.toString);
+    //this.object.emit('this.models');
     }
     
   } 

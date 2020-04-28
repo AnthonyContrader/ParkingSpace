@@ -59,33 +59,30 @@
 </div>
 
 <div>
-  <form>
+  
+  <form id="floatright" >
     <td>
       <input placeholder="model" [(ngModel)]="carToCheck.model"
           [ngModelOptions]="{standalone: true}">
     </td>
     <td>
-      <button (click)="getAllByModel(carToCheck.model)">SearchByModel</button>
-      <!-- <a [routerLink]="['/admin-dashboard/persons/personsSearchByLastname']"> 
-        Go 
-      </a> -->
+      <button (click)="getAllByModel(carToCheck.model)" >
+       <a [routerLink]="['/admin-dashboard/search-by-model']">SearchByModel</a> 
+      </button>
      <!--  <button onclick="window.location.href 
-        = '/admin-dashboard/persons/personsSearchByLastname';">Click Here
+        = 'google.com';">Click Here
       </button> -->
-        
-
     </td>
      <!-- <input #box (keyup.enter)="onEnter(box.value)"> -->
      <!-- <p>{{value}}</p> -->
     </form>
-  <div >
-    <tr *ngFor="let car of models">
-      <td>
-        <input [(ngModel)]="car.license"> 
-      </td>
-      <td>
-        <input [(ngModel)]="car.model"> 
-      </td>
-    </tr>
-  </div>
 </div>
+<!-- <app-search-by-model *ngFor="let car of models" 
+                      [models]="car"> 
+</app-search-by-model> -->
+<app-search-by-model *ngFor="let car of models"
+   [(ngModel)]="car">
+   <p>{{car.license}}</p>
+</app-search-by-model>
+
+
