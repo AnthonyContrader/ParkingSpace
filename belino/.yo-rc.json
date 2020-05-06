@@ -1,0 +1,32 @@
+{
+  "generator-jhipster": {
+    "promptValues": {
+      "packageName": "com.it.laura"
+    },
+    "jhipsterVersion": "5.3.4",
+    "applicationType": "microservice",
+    "baseName": "belino1",
+    "packageName": "com.it.laura",
+    "packageFolder": "com/it/laura",
+    "serverPort": "4041",
+    "authenticationType": "jwt",
+    "cacheProvider": "hazelcast",
+    "enableHibernateCache": false,
+    "websocket": false,
+    "databaseType": "sql",
+    "devDatabaseType": "h2Disk",
+    "prodDatabaseType": "mysql",
+    "searchEngine": false,
+    "messageBroker": false,
+    "serviceDiscoveryType": "consul",
+    "buildTool": "maven",
+    "enableSwaggerCodegen": false,
+    "jwtSecretKey": "OWMxNjhmZWU3MmRhY2FlMDQyMTg3NDc4MDQxMDY2MDEzNmI0MjNiNTRkNGU3MjEyMTI5MzA2NzgwNzhjYzM5MDlmZDdiZGU1MmZiM2Q4YzNjOGRjNTIxNzVhODhmM2NmMTdmMTlmMGU5NjA0NmE2Y2M0YTg4YmJlMWE3ZWE1Yjg=",
+    "enableTranslation": false,
+    "testFrameworks": [],
+    "jhiPrefix": "jhi",
+    "clientPackageManager": "npm",
+    "skipClient": true,
+    "skipUserManagement": true
+  }
+}
