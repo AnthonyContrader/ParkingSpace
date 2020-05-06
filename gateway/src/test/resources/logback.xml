@@ -4,7 +4,7 @@
 <configuration scan="true">
     <include resource="org/springframework/boot/logging/logback/base.xml"/>
 
-    <logger name="com.it.contrader" level="INFO"/>
+    <logger name="com.it.laura" level="INFO"/>
 
     <logger name="io.github.jhipster" level="WARN"/>
 

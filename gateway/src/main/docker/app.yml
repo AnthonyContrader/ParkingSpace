@@ -16,7 +16,7 @@ services:
             file: mysql.yml
             service: gateway-mysql
     consul:
-        image: consul:1.2.0
+        image: consul:1.2.3
         command: consul agent -dev -ui -client 0.0.0.0
         ports:
             - 8300:8300
