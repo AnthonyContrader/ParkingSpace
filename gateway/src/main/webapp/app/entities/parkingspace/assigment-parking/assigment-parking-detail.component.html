@@ -1,0 +1,39 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="assigmentParking">
+            <h2><span>Assigment Parking</span> {{assigmentParking.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span>Entry Date Time</span></dt>
+                <dd>
+                    <span>{{assigmentParking.entryDateTime}}</span>
+                </dd>
+                <dt><span>Car</span></dt>
+                <dd>
+                    <div *ngIf="assigmentParking.carId">
+                        <a [routerLink]="['/car', assigmentParking.carId, 'view']">{{assigmentParking.carId}}</a>
+                    </div>
+                </dd>
+                <dt><span>Parkingplace</span></dt>
+                <dd>
+                    <div *ngIf="assigmentParking.parkingplaceId">
+                        <a [routerLink]="['/parking-place', assigmentParking.parkingplaceId, 'view']">{{assigmentParking.parkingplaceId}}</a>
+                    </div>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/assigment-parking', assigmentParking.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

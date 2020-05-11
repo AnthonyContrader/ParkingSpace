@@ -1,13 +1,13 @@
 {
   "generator-jhipster": {
     "promptValues": {
-      "packageName": "com.it.laura"
+      "packageName": "it.contrader.com"
     },
     "jhipsterVersion": "5.3.4",
     "applicationType": "gateway",
     "baseName": "gateway",
-    "packageName": "com.it.laura",
-    "packageFolder": "com/it/laura",
+    "packageName": "it.contrader.com",
+    "packageFolder": "it/contrader/com",
     "serverPort": "4040",
     "authenticationType": "jwt",
     "cacheProvider": "hazelcast",
@@ -21,12 +21,12 @@
     "serviceDiscoveryType": "consul",
     "buildTool": "maven",
     "enableSwaggerCodegen": false,
-    "jwtSecretKey": "OWM0ODIwMTQ3MzkzMzllMWUxYzA3MWIxNDdkZTJlZTA1YzkzZGEyNzI0MzY0ZGMwN2JjMmI1MzAzY2Q5ZDIyZjQxYWE4NmJiZWI5OGM3ZWM4MjI4NmMyZDQzMDA4MjdhMDc5ZDE3YWYxMGFkZGU3M2FkYjM1YjczYjk1YmQyMmI=",
-    "clientFramework": "angularX",
-    "useSass": false,
-    "clientPackageManager": "npm",
+    "jwtSecretKey": "MTEwMTcwZTllY2FhMDE1ZWI4NmZjZjA0M2ZmMDZlOTMxYTRiMGU0M2Y5ZDNmNjI2NzYxMDg4ZWJkNzBiODNmZTFiZTcxMzc4ZmE0OGY0YTUxODQ5MThjNmUyNTJiMTI3YTA2YTI2MmYxZjhiMmUxNGY0NjgyZjNkMDM1OGQ2YjQ=",
+    "enableTranslation": false,
     "testFrameworks": [],
     "jhiPrefix": "jhi",
-    "enableTranslation": false
+    "clientPackageManager": "npm",
+    "skipClient": true,
+    "skipUserManagement": true
   }
 }
