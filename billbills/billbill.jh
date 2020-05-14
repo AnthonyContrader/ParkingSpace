@@ -1,0 +1,20 @@
+entity Bill{
+	prezzo Double,
+	status Billstatus
+}
+enum Billstatus{
+	PAID, PENDING , CANCELLED
+}
+entity AssignmentB{
+	entryDateTime Instant,
+	car Long,
+	parkplace Long
+}
+
+relationship OneToOne{
+	Bill{assignmentb} to AssignmentB
+}
+
+dto * with mapstruct
+service * with serviceImpl
+paginate * with pagination
