@@ -18,14 +18,14 @@
             "otherEntityField": "id"
         }
     ],
-    "changelogDate": "20200510205435",
+    "changelogDate": "20200511131851",
     "entityTableName": "car",
     "dto": "mapstruct",
-    "pagination": "infinite-scroll",
+    "pagination": "pagination",
     "service": "serviceImpl",
     "jpaMetamodelFiltering": false,
     "fluentMethods": true,
-    "clientRootFolder": "parkingspace",
+    "clientRootFolder": "parcheggio",
     "applications": "*",
-    "microserviceName": "parkingspace"
+    "microserviceName": "parcheggio"
 }

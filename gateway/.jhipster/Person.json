@@ -11,14 +11,14 @@
         }
     ],
     "relationships": [],
-    "changelogDate": "20200510205436",
+    "changelogDate": "20200511131852",
     "entityTableName": "person",
     "dto": "mapstruct",
-    "pagination": "infinite-scroll",
+    "pagination": "pagination",
     "service": "serviceImpl",
     "jpaMetamodelFiltering": false,
     "fluentMethods": true,
-    "clientRootFolder": "parkingspace",
+    "clientRootFolder": "parcheggio",
     "applications": "*",
-    "microserviceName": "parkingspace"
+    "microserviceName": "parcheggio"
 }

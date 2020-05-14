@@ -24,14 +24,14 @@
             "otherEntityRelationshipName": "assigmentParking"
         }
     ],
-    "changelogDate": "20200510205439",
+    "changelogDate": "20200511131855",
     "entityTableName": "assigment_parking",
     "dto": "mapstruct",
-    "pagination": "infinite-scroll",
+    "pagination": "pagination",
     "service": "serviceImpl",
     "jpaMetamodelFiltering": false,
     "fluentMethods": true,
-    "clientRootFolder": "parkingspace",
+    "clientRootFolder": "parcheggio",
     "applications": "*",
-    "microserviceName": "parkingspace"
+    "microserviceName": "parcheggio"
 }

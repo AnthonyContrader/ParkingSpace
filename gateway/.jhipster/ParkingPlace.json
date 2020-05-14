@@ -14,14 +14,14 @@
             "otherEntityField": "id"
         }
     ],
-    "changelogDate": "20200510205437",
+    "changelogDate": "20200511131853",
     "entityTableName": "parking_place",
     "dto": "mapstruct",
-    "pagination": "infinite-scroll",
+    "pagination": "pagination",
     "service": "serviceImpl",
     "jpaMetamodelFiltering": false,
     "fluentMethods": true,
-    "clientRootFolder": "parkingspace",
+    "clientRootFolder": "parcheggio",
     "applications": "*",
-    "microserviceName": "parkingspace"
+    "microserviceName": "parcheggio"
 }

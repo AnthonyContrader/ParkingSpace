@@ -1,13 +1,13 @@
 {
   "generator-jhipster": {
     "promptValues": {
-      "packageName": "it.contrader.com"
+      "packageName": "com.it.contrader"
     },
     "jhipsterVersion": "5.3.4",
     "applicationType": "gateway",
     "baseName": "gateway",
-    "packageName": "it.contrader.com",
-    "packageFolder": "it/contrader/com",
+    "packageName": "com.it.contrader",
+    "packageFolder": "com/it/contrader",
     "serverPort": "4040",
     "authenticationType": "jwt",
     "cacheProvider": "hazelcast",
@@ -21,12 +21,12 @@
     "serviceDiscoveryType": "consul",
     "buildTool": "maven",
     "enableSwaggerCodegen": false,
-    "jwtSecretKey": "MTEwMTcwZTllY2FhMDE1ZWI4NmZjZjA0M2ZmMDZlOTMxYTRiMGU0M2Y5ZDNmNjI2NzYxMDg4ZWJkNzBiODNmZTFiZTcxMzc4ZmE0OGY0YTUxODQ5MThjNmUyNTJiMTI3YTA2YTI2MmYxZjhiMmUxNGY0NjgyZjNkMDM1OGQ2YjQ=",
-    "enableTranslation": false,
+    "jwtSecretKey": "NmI1Mjg0MjMxNTY0OWJjZGI0ZGVmM2ZhNjRhM2E2OWE3MDhmNjkwMWFhYWMzNzljNjRjYWE1ZjRmODA1NTgwY2ZlNzRjM2U0NTQ4MWIxYTJhMjdkZmYxMmIxMThlYTNiNmZiNTE4M2Y1MzU4NzliOWQ3ZDgyYTU2NzUwOTYxNWI=",
+    "clientFramework": "angularX",
+    "useSass": false,
+    "clientPackageManager": "npm",
     "testFrameworks": [],
     "jhiPrefix": "jhi",
-    "clientPackageManager": "npm",
-    "skipClient": true,
-    "skipUserManagement": true
+    "enableTranslation": false
   }
 }

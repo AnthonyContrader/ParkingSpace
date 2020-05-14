@@ -1,0 +1,35 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="assignmentP">
+            <h2><span>Assignment P</span> {{assignmentP.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span>Car</span></dt>
+                <dd>
+                    <span>{{assignmentP.car}}</span>
+                </dd>
+                <dt><span>Park</span></dt>
+                <dd>
+                    <span>{{assignmentP.park}}</span>
+                </dd>
+                <dt><span>Entry Date Time</span></dt>
+                <dd>
+                    <span>{{assignmentP.entryDateTime}}</span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/assignment-p', assignmentP.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>
