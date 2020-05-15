@@ -1,24 +1,24 @@
 import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 
-import { GatewayCarModule as ParcheggioCarModule } from './parcheggio/car/car.module';
-import { GatewayPersonModule as ParcheggioPersonModule } from './parcheggio/person/person.module';
-import { GatewayParkingPlaceModule as ParcheggioParkingPlaceModule } from './parcheggio/parking-place/parking-place.module';
-import { GatewayFloorModule as ParcheggioFloorModule } from './parcheggio/floor/floor.module';
-import { GatewayAssigmentParkingModule as ParcheggioAssigmentParkingModule } from './parcheggio/assigment-parking/assigment-parking.module';
-import { GatewayBillModule as BillbillBillModule } from './billbill/bill/bill.module';
-import { GatewayAssignmentBModule as BillbillAssignmentBModule } from './billbill/assignment-b/assignment-b.module';
+import { GatewayCarModule as ParkingspaceCarModule } from './parkingspace/car/car.module';
+import { GatewayPersonModule as ParkingspacePersonModule } from './parkingspace/person/person.module';
+import { GatewayParkingPlaceModule as ParkingspaceParkingPlaceModule } from './parkingspace/parking-place/parking-place.module';
+import { GatewayFloorModule as ParkingspaceFloorModule } from './parkingspace/floor/floor.module';
+import { GatewayAssigmentParkingModule as ParkingspaceAssigmentParkingModule } from './parkingspace/assigment-parking/assigment-parking.module';
+import { GatewayBillModule as BillBillModule } from './bill/bill/bill.module';
+import { GatewayAssignmentParkingModule as BillAssignmentParkingModule } from './bill/assignment-parking/assignment-parking.module';
 /* jhipster-needle-add-entity-module-import - JHipster will add entity modules imports here */
 
 @NgModule({
     // prettier-ignore
     imports: [
-        ParcheggioCarModule,
-        ParcheggioPersonModule,
-        ParcheggioParkingPlaceModule,
-        ParcheggioFloorModule,
-        ParcheggioAssigmentParkingModule,
-        BillbillBillModule,
-        BillbillAssignmentBModule,
+        ParkingspaceCarModule,
+        ParkingspacePersonModule,
+        ParkingspaceParkingPlaceModule,
+        ParkingspaceFloorModule,
+        ParkingspaceAssigmentParkingModule,
+        BillBillModule,
+        BillAssignmentParkingModule,
         /* jhipster-needle-add-entity-module - JHipster will add entity modules here */
     ],
     declarations: [],

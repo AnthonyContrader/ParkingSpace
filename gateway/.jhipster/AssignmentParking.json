@@ -1,0 +1,28 @@
+{
+    "name": "AssignmentParking",
+    "fields": [
+        {
+            "fieldName": "car",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "parkingplace",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "entryDateTime",
+            "fieldType": "Instant"
+        }
+    ],
+    "relationships": [],
+    "changelogDate": "20200511103442",
+    "entityTableName": "assignment_parking",
+    "dto": "mapstruct",
+    "pagination": "infinite-scroll",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "bill",
+    "applications": "*",
+    "microserviceName": "bill"
+}

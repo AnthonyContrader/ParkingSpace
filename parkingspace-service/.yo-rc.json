@@ -1,0 +1,32 @@
+{
+  "generator-jhipster": {
+    "promptValues": {
+      "packageName": "it.contrader.com"
+    },
+    "jhipsterVersion": "5.3.4",
+    "applicationType": "microservice",
+    "baseName": "parkingspace",
+    "packageName": "it.contrader.com",
+    "packageFolder": "it/contrader/com",
+    "serverPort": "4043",
+    "authenticationType": "jwt",
+    "cacheProvider": "hazelcast",
+    "enableHibernateCache": false,
+    "websocket": false,
+    "databaseType": "sql",
+    "devDatabaseType": "h2Disk",
+    "prodDatabaseType": "mysql",
+    "searchEngine": false,
+    "messageBroker": false,
+    "serviceDiscoveryType": "consul",
+    "buildTool": "maven",
+    "enableSwaggerCodegen": false,
+    "jwtSecretKey": "YTAzOTFmNzY4NTNhN2EzMjIzNzVkODAwODMxZDczYTRkM2U4MGRlNGYwYmU2YTZiZjE3NjBjYTQ1MTE0YmQ1YzY4NzdkNGEwYTg1ZGFiOWJhMWIyNmFkOWNiODQ3OTNhNDViNmFmZTFjMDVjMmRlY2QwOGY2ODM5YjU0Y2ZiYjk=",
+    "enableTranslation": false,
+    "testFrameworks": [],
+    "jhiPrefix": "jhi",
+    "clientPackageManager": "npm",
+    "skipClient": true,
+    "skipUserManagement": true
+  }
+}
