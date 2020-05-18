@@ -17,7 +17,10 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cloud.client.loadbalancer.LoadBalanced;
 import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
+import org.springframework.data.domain.Sort.Order;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpMethod;
@@ -172,11 +175,50 @@ public class BillResource {
 	}
     //save assginment of parkingspace on this database.
 	public void updateAssignmentParkingTable() {
-	
+	    //dto di primo microservizio
+		boolean isPresent;
+		int cont;
 		List<AssignmentParkingDTO> dto = getAssignments();
-		for(AssignmentParkingDTO a : dto){
+		Pageable pageable = PageRequest.of(0, 20, Sort.by(Order.asc("id")));
+		//dto di questo microservizio
+		Page<AssignmentParkingDTO> page = assignmentService.findAll(pageable);
+		List<AssignmentParkingDTO> dto1 = page.getContent();
+		System.out.println("\n    \n     \nSize list assignment : "+ dto1.size());
+		if(dto1.size()==0) {
+			saveAll(dto);
+		}else{
+			for(AssignmentParkingDTO b : dto) {
+				isPresent = true;
+				for(AssignmentParkingDTO a : dto1) {
+					System.out.println("\n\n\n\n equalsAssig: "+equalsAssig(b,a));
+					if(equalsAssig(b,a)) {
+						isPresent = true;
+						System.out.println("\n\n\n\n\nIsPresent di a:: "+ isPresent);
+						break;
+					}else
+						isPresent = false;
+				}
+				System.out.println("\n\n\n\n\nIsPresent di b:: "+ isPresent);
+				if(!isPresent) {
+					assignmentService.save(b);
+					System.out.println("\n \n \n size dto1 = "+ dto1.size());
+				}
+				
+			}
+			
+			
+			
+		}		
+	}
+	public boolean equalsAssig(AssignmentParkingDTO a, AssignmentParkingDTO b) {
+		return a.getCar() == b.getCar() && a.getEntryDateTime().equals(b.getEntryDateTime());
+	}
+	
+	public void saveAll(List<AssignmentParkingDTO> dto) {
+		for(AssignmentParkingDTO a : dto) {
 			assignmentService.save(a);
 		}
 	}
 	
+
 }
