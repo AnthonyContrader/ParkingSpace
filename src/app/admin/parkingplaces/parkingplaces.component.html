@@ -1,0 +1,55 @@
+<div class="container">
+  <div class="row mt-5">
+    <div class="col-md-1">
+    </div>
+<div class="col-md-10">
+  <table>
+    <tr>
+      <th>
+        Numberplace
+      </th>
+      <th>
+        Floor
+      </th>
+      <th>
+        Edit
+      </th>
+      <th>
+        Parkingplace
+      </th>
+    </tr>
+    <tr>
+      <td>
+        <input placeholder="numberplace"[(ngModel)]="parkingplacetoinsert.numberPlace">
+      </td>
+      <td>
+        <input placeholder="floor"[(ngModel)]="parkingplacetoinsert.floorId">
+      </td>
+      <td>
+        <button (click)="insert(parkingplacetoinsert)">Insert</button>
+      </td>
+      <td>
+        <button (click) = "clear()">Clear</button>
+      </td>
+    </tr>
+    <tr *ngFor = "let parkingplace of parkingplaces">
+      <td>
+        <input [(ngModel)]="parkingplace.numberPlace">
+      </td>
+      <td>
+        <input [(ngModel)]="parkingplace.floorId">
+      </td>
+
+      <td>
+        <button (click) = "update(parkingplace)">Update</button>
+      </td>
+      <td>
+        <button (click) = "delete(parkingplace)">Delete</button>
+      </td>
+    </tr>
+  </table>
+</div>
+      <div class ="col-md-1">
+      </div>
+  </div>
+</div>

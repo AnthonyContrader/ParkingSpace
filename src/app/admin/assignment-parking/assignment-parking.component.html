@@ -1,0 +1,53 @@
+<div class="container">
+    <div class="row mt-5">
+      <div class="col-md-1">
+  
+      </div>
+      <div class="col-md-10">
+        <table>
+          <tr>
+            <th>Car</th>
+            <th>PostoAuto</th>
+            <th>EntryDateTime</th>
+            <th>Edit</th>
+            <th>Assignments</th>
+          </tr>
+          <tr>
+            <td>
+              <input placeholder="license Car" [(ngModel)]="assignmentToInsert.car">
+            </td>
+            <td>
+              <input placeholder="id PostoAuto" [(ngModel)]="assignmentToInsert.parkingplace">
+            </td>
+            <td>         
+            </td>
+            <td>
+              <button (click)="insert(assignmentToInsert)">Insert</button>
+            </td>
+            <td>
+              <button (click)="clear()">Clear</button>
+            </td>
+          </tr>
+          <tr *ngFor="let asg of assignments">
+            <td>
+              <input [(ngModel)]="asg.car">
+            </td>
+            <td>
+                <input [(ngModel)]="asg.parkingplace">
+            </td>
+            <td>
+              <input [(ngModel)]="asg.entryDateTime">
+            </td>
+            <td>
+              <button (click)=update(asg)>Save</button>
+            </td>
+            <td>
+              <button (click)="delete(asg)">Delete</button>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="col-md-1">
+      </div>
+    </div>
+  </div>

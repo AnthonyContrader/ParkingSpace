@@ -1,0 +1,48 @@
+<div class="container">
+    <div class="row mt-5">
+        <div class="col-md-1">
+
+        </div>
+        <div class="col-md-10">
+            <table>
+                <tr>
+                    <th>
+                        Number Floor
+                    </th>
+                    <th>
+                        Edit
+                    </th>
+                    <th>
+                      
+                    </th>
+                </tr>
+                <tr>
+                    <td>
+                        <input placeholder="numberfloor" [(ngModel)]="floortoinsert.numberFloor" >
+                    </td>
+                    <td>
+                        <button (click)="insert(floortoinsert)">Insert</button>
+                    </td>
+                    <td>
+                        <button (click)="clear()">clear</button>
+                    </td>
+                </tr>
+
+                <tr *ngFor="let floor of floor">
+                    <td>
+                        <input [(ngModel)]="floor.numberFloor">
+                    </td>
+                    <td>
+                        <button (click)="update(floor)">Update</button>
+                    </td>
+                    <td>
+                        <button (click)="delete(floor)">Delete</button>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="col-md-1">
+
+        </div>
+    </div>
+</div>

@@ -1,0 +1,76 @@
+<div class="container">
+  <div class="row mt-5">
+    <div class="col-md-1">
+
+    </div>
+    <div class="col-md-10">
+      <table>
+        <tr>
+          <th>
+            License
+          </th>
+          <th>
+            Model
+          </th>
+          
+          <th>
+            Edit
+          </th>
+          <th>
+            Car
+          </th>
+        </tr>
+        <tr>
+          <td>
+            <input placeholder="license" [(ngModel)]="cartoinsert.license">
+          </td>
+          <td>
+            <input placeholder="model" [(ngModel)]="cartoinsert.model">
+          </td>
+          
+          <td>
+            <button (click)="insert(cartoinsert)">Insert</button>
+          </td>
+          <td>
+            <button (click)="clear()">Clear</button>
+          </td>
+        </tr>
+        <tr *ngFor="let car of cars">
+          <td>
+            <input [(ngModel)]="car.license">
+          </td>
+          <td>
+            <input [(ngModel)]="car.model">
+          </td>
+          
+          <td>
+            <button (click)=update(car)>Save</button>
+          </td>
+          <td>
+            <button (click)="delete(car)">Delete</button>
+          </td>
+        </tr>
+      </table>
+    </div>
+    <div class="col-md-1">
+
+    </div>
+  </div>
+</div>
+
+<div>
+<div >
+  <form id="floatright" >
+    <td>
+      <input placeholder="model" [(ngModel)]="carToCheck.model"
+          [ngModelOptions]="{standalone: true}">
+    </td>
+    <td>
+      <button (click)="getAllByModel(carToCheck.model)">
+       <a [routerLink]="['search-by-model']" >SearchByModel</a>  
+      </button>
+    </td>
+</form>
+<app-cars-list-by-model  [models]="models"> </app-cars-list-by-model>
+
+</div>
