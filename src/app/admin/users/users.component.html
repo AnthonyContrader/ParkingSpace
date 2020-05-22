@@ -15,13 +15,13 @@
         </tr>
         <tr>
           <td>
-            <input placeholder="username" [(ngModel)]="usertoinsert.firstName">
+            <input placeholder="firstName" [(ngModel)]="usertoinsert.firstName">
           </td>
           <td>
-            <input placeholder="password" [(ngModel)]="usertoinsert.lastName">
+            <input placeholder="lastName" [(ngModel)]="usertoinsert.lastName">
           </td>
           <td>
-            <input placeholder="password" [(ngModel)]="usertoinsert.email">
+            <input placeholder="email" [(ngModel)]="usertoinsert.email">
           </td>
           <td></td>
           <td></td>
@@ -60,12 +60,9 @@
   </div>
 </div>
 <div class="col-md-1">
-  <!-- colonna vuota per centrare i dettagli-->
 </div>
 
-<div class="col-md-10">
-  <!-- Se "selected" non è nullo, viene passato il suo valore sotto la chiave dto alla compoment
-    figlia. Questo è un esempio di binding unidirezionale tra ts e ts-->
+<div class="col-md-10">  
   <app-user-details *ngIf="selected" [dto]="selected"></app-user-details>
 </div>
 <div class="col-md-1">

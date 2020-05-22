@@ -34,9 +34,7 @@ export class UserService extends AbstractService<UserDTO>{
   }
 
   auth(){
-    console.log('Bearer '+localStorage.getItem("key"));
     const user = JSON.parse(localStorage.getItem("AUTOKEN")) as UserDTO;
-    console.log("user: ",user);
     if(user){
       return 'Bearer '+ localStorage.getItem("key");
     }else {
@@ -46,5 +44,10 @@ export class UserService extends AbstractService<UserDTO>{
   userLogged(username: string) {
     return this.http.get('http://localhost:4040/api/users/' + username, {headers: {Authorization: this.auth()}});
   }
+
+  insert(dto: UserDTO): Observable<any> {
+    return this.http.post('http://localhost:4040/' 
+    + this.name + '/' + this.type_entity, dto , this.getAuth());
+}
 
 }

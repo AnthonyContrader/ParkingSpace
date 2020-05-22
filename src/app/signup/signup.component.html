@@ -1,0 +1,30 @@
+<div class="container-fluid">
+  <div class="col-md-5">
+   <!--  <div class="col-md-7">
+      <img src="../../assets/logo.svg" alt="logo"> 
+   </div> -->
+      <form #f="ngForm">
+          <p>Register</p>
+          <div class="form-group">
+            <input class="form-control" type="text" id="login" name="login" 
+            placeholder="login" ngModel>
+          </div>
+          <div class="form-group">
+            <input class="form-control" type="text" id="user" name="firstName" 
+            placeholder="firstName" ngModel>
+          </div>
+          <div class="form-group">
+            <input class="form-control" type="text" id="email" name="email" 
+            placeholder="Your email" ngModel>
+          </div>
+          <div class="form-group">
+            <input class="form-control" type="password" id="pass" name="password" 
+            placeholder="new password" ngModel>
+          </div>
+          <button type="submit" (click)="register(f)">register</button>
+      </form>
+  </div>
+</div>
+ 
+
+ 

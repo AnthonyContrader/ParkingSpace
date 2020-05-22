@@ -29,11 +29,9 @@ export class LoginComponent implements OnInit {
         localStorage.setItem("key", token.id_token);  //questo lo salva effettivamente in sessione globale
         this.service.userLogged(this.loginDTO.username).subscribe((user:UserDTO)=>
         {
-
             if (user != null) {
                 localStorage.setItem('AUTOKEN', JSON.stringify(user));
-                //console.log("ruolo : ", user.authorities[0], user.authorities[1]);
-                if(user.authorities[1] == "ROLE_ADMIN" ) {
+                if(user.authorities[1] == "ROLE_ADMIN") {
                     this.router.navigate(['/admin-dashboard']);
                 } 
                 if(user.authorities[1] == "ROLE_USER") {
@@ -46,8 +44,9 @@ export class LoginComponent implements OnInit {
     });
     } 
 
-    singUp(): void{
-        this.router.navigate(['/sing-up']);
+    signUp(f: NgForm): void{
+        //console.log("ok");
+        this.router.navigate(['/sign-up']);
     }
 
 }

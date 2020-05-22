@@ -1,3 +1,4 @@
+import { SignupComponent } from './../signup/signup.component';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { LoginComponent } from './login.component';
@@ -11,7 +12,7 @@ import { FormsModule } from '@angular/forms';
  * @author Vittorio Valent
  */
 @NgModule({
-  declarations: [LoginComponent],
+  declarations: [LoginComponent, SignupComponent],
 
   imports: [
     CommonModule,

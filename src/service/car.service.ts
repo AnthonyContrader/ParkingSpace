@@ -23,21 +23,4 @@ export class CarService extends AbstractService<CarDTO>{
     this.name_microservizio = 'parkingspace';
   }
   
-  /* deleteCar(license: string): Observable<any> {
-    return this.http.delete('http://localhost:' + this.port + '/' + this.type_entity + '/delete?id=' + license);
-  }
-  readCar(license: string): Observable<CarDTO> {
-    return this.http.get<CarDTO>('http://localhost:' + this.port + '/' + this.type_entity + '/read?id=' + license);
-  }
-  insertCar(dto:CarDTO): Observable<any> {
-    return this.http.post('http://localhost:' + this.port + '/' + this.type_entity + '/insert', dto);
-}
-
-  updateCar(dto: CarDTO): Observable<CarDTO> {
-    return this.http.put<CarDTO>('http://localhost:' + this.port + '/' + this.type_entity + '/update', dto);
-
-  } */
-
-
-
 }

@@ -27,15 +27,13 @@ import { AssignmentParkingComponent } from './assignment-parking/assignment-park
 const routes: Routes = [
   { path: 'admin-dashboard', component: AdminLayoutComponent, 
   children:[
-            { path: '', component: AdminDashboardComponent},
-            { path: 'cars', component: CarsComponent, 
-              children:[{path: 'search-by-model', component:CarsListByModelComponent}]},
-            { path: 'users', component: UsersComponent},
-            { path: 'parkingplaces', component: ParkingplacesComponent},
+            { path: '',     component: AdminDashboardComponent},
+            { path: 'cars', component: CarsComponent,  children:[{path: 'search-by-model', component:CarsListByModelComponent}]},
+            { path: 'users',component: UsersComponent},
+            { path: 'parkingplaces',    component: ParkingplacesComponent},
             { path: 'work-in-progress', component: WorkInProgressComponent},
-            { path: 'work-in-progress', component: WorkInProgressComponent},
-            { path : 'floor' , component : FloorComponent},
-            { path: 'persons', component: PersonsComponent},
+            { path: 'floor' ,     component : FloorComponent},
+            { path: 'persons',    component: PersonsComponent},
             { path: 'assignments',component: AssignmentParkingComponent}
            ]}
 ];
