@@ -14,6 +14,7 @@ export class PersonsComponent implements OnInit {
   personsSameLastName: PersonDTO[]=[];
   lastName= '';
   personcheck: PersonDTO = new PersonDTO();
+
   constructor(private service: PersonService) { }
 
   ngOnInit() {
@@ -21,7 +22,6 @@ export class PersonsComponent implements OnInit {
   }
   getPersons() {
     this.service.getAll().subscribe(persons => this.persons=persons);
-    //throw new Error("Method not implemented.");
   }
   delete(person: PersonDTO){
     this.service.delete(person.id).subscribe(()=>this.getPersons());

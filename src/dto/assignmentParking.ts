@@ -11,4 +11,8 @@ export class AssignmentParkingDTO{
     car: number;
     parkingplace: number;
     entryDateTime: Date; 
+
+    constructor(){
+        this.entryDateTime = new Date();
+    }
 }

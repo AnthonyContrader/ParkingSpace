@@ -14,7 +14,6 @@ export class AdminDashboardComponent implements OnInit {
 
   user: UserDTO;
 
-
   constructor() { }
 
   ngOnInit() {

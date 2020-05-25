@@ -1,9 +1,11 @@
+import { Observable } from 'rxjs';
+import { PersonDTO } from './../../../dto/persondto';
+import { PersonService } from './../../../service/person.service';
 
 
 import { Component, OnInit, Input, Output } from '@angular/core';
 import { CarService } from 'src/service/car.service';
 import { CarDTO } from 'src/dto/cardto';
-import { EventEmitter } from 'protractor';
 
 
 @Component({
@@ -19,14 +21,17 @@ export class CarsComponent implements OnInit {
   models: CarDTO[]=[];
   model: String;
   carToCheck: CarDTO = new CarDTO();
+  persons: PersonDTO[];
+  listId: Array<number>;
 
-  constructor(private service: CarService) { }
+  constructor(private service: CarService, private personService: PersonService) { }
 
-  ngOnInit() {
+  ngOnInit() { 
     this.getCars();
   }
 
   getCars() {
+    this.setListIdPersons();
     this.service.getAll().subscribe(cars => this.cars = cars);
   }
 
@@ -60,5 +65,11 @@ export class CarsComponent implements OnInit {
     }
     
   } 
-  
+  //ritorna la lista di ID Person 
+   setListIdPersons(){
+     this.personService.getAll().subscribe(persons => this.persons = persons);
+     
+     //console.log("lista di ListID di person",this.listId.length);
+  }
+   
 }

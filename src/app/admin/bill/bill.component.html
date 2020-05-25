@@ -1,3 +1,59 @@
-<p>
-  bill works!
-</p>
+<div class="container">
+  <div class="row mt-5">
+  
+    <div class="col-md-10">
+      <table>
+        <tr>
+          <th>Price</th>
+          <th>BillStatus</th>
+          <th>AssignmentId</th>
+          <th>Edit</th>
+          <th>Car</th>
+        </tr>
+        <tr>
+          <td>
+            <input placeholder="price" [(ngModel)]="billToInsert.price">
+          </td>
+          <td>
+            <select [(ngModel)]="billToInsert.billStatus">
+              <option value = "PAID">PAID</option>
+              <option value = "PENDING">PENDING</option>
+              <option value = "CANCELED">CANCELED</option>
+            </select>
+          </td>
+          <td>
+            <select [(ngModel)]="billToInsert.assignmentId">
+              <option *ngFor="let a of assignments" [value]="a.id">{{a.id}}</option>
+            </select>
+          </td>
+          <td>
+            <button (click)="insert(billToInsert)">Insert</button>
+          </td>
+          <td>
+            <button (click)="clear()">Clear</button>
+          </td>
+        </tr>
+        <tr *ngFor="let bill of bills">
+          <td>
+            <input [(ngModel)]="bill.price">
+          </td>
+          <td>
+            <input [(ngModel)]="bill.billStatus">
+          </td>
+          <td>
+            <input [(ngModel)]="bill.assignmentId">
+          </td>
+          <td>
+            <button (click)=update(bill)>Save</button>
+          </td>
+          <td>
+            <button (click)="delete(bill)">Delete</button>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</div>
+
+
+

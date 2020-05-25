@@ -9,18 +9,23 @@
             <th>Car</th>
             <th>PostoAuto</th>
             <th>EntryDateTime</th>
+            
             <th>Edit</th>
             <th>Assignments</th>
           </tr>
           <tr>
             <td>
-              <input placeholder="license Car" [(ngModel)]="assignmentToInsert.car">
+              <select [(ngModel)]="assignmentToInsert.car">
+                <option *ngFor="let car of cars" [value]="car.id">{{car.id}}</option>
+              </select>
             </td>
             <td>
-              <input placeholder="id PostoAuto" [(ngModel)]="assignmentToInsert.parkingplace">
+              <select [(ngModel)]="assignmentToInsert.parkingplace">
+                  <option *ngFor="let park of parkingplaces" [value]="park.id">{{park.id}}</option>
+              </select>
+                   
             </td>
-            <td>         
-            </td>
+            <td></td>
             <td>
               <button (click)="insert(assignmentToInsert)">Insert</button>
             </td>
